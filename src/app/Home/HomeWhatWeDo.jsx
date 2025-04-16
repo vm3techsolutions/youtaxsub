@@ -1,7 +1,7 @@
 "use client";
 export default function ServicesSection() {
   return (
-    <section className="mx-auto px-5 sm:px-20 py-16 text-center">
+    <section className="mx-auto px-5 sm:px-16 py-16 text-center">
       
       {/* Heading */}
       <div className="mb-6">
@@ -12,7 +12,7 @@ export default function ServicesSection() {
 
       {/* Subtitle */}
       <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-gray-700 mb-12 px-2">
-        Expert Help, Zero Stress, Maximum Savings.
+      Expert Help | Zero Stress | Maximum Savings
       </h2>
 
       {/* Service Cards */}
@@ -57,10 +57,8 @@ export default function ServicesSection() {
           </div>
 
           <p className="text-white text-base sm:text-lg leading-relaxed">
-            Managing your business finances efficiently is crucial for growth and compliance.
-            Our flexible accountant hiring services allow you to acquire professional financial help
-            based on your needs and financial constraints. Our staff of seasoned Chartered Accountants (CAs)
-            is available to assist you whether you need an accountant for a few hours, a day, or on a monthly basis.
+          Our comprehensive business consulting services are designed to support entrepreneurs and established businesses throughout their journey. From initial registration to ongoing compliance, we offer a range of solutions tailored to your needs.
+          Our team of experienced professionals is committed to providing personalized solutions to meet your business's unique requirements. Whether you're starting a new venture or looking to optimize your existing operations, we're here to help you achieve your goals.
           </p>
         </div>
       </div>

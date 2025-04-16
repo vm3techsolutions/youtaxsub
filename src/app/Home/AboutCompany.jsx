@@ -40,7 +40,7 @@ export default function ServicesSection() {
 
           <div className="mt-2">
             <Image
-              src="/assets/aboutCompany-top.png"
+              src="/assets/About1.png"
               alt="Meeting Discussion"
               width={500}
               height={300}
@@ -55,8 +55,8 @@ export default function ServicesSection() {
   <div className="flex flex-col md:flex-row gap-8 text-left">
     
     {/* Text Section - Increased Width */}
-    <div className="md:w-[65%] p-5 sm:p-6">
-      <p className="text-md">
+    <div className="md:w-[65%] p-5 sm:p-6 h-full">
+      <p className="text-md h-full">
         The team at the firm has dedicated and experienced professionals and associates like Chartered Accountants, Company Secretary and Consultants to provide end to end services to your business.
         Founded in 2018 by Mr. Nandkishor And Mrs. Sonali Devadnye, YOUTAX INDIA CONSULTING PRIVATE LIMITED has come a long way from its beginnings in Hadapsar Pune. When they first started out, their passion for providing in time delivery of quality services in the field of TAX so that YOUTAX INDIA CONSULTING PRIVATE LIMITED can offer you quality services for your business for future growth. We now serve customers all over Maharashtra.
       </p>
@@ -80,11 +80,11 @@ export default function ServicesSection() {
     {/* Image Section - Reduced Width & Height */}
     <div className="md:w-[35%] mt-2 flex justify-center items-start">
       <Image
-        src="/assets/aboutCompany-bottom.png"
+        src="/assets/About2.png"
         alt="Meeting Discussion"
         width={300}
         height={250}
-        className="rounded-xl object-cover h-[60vh] w-full"
+        className="rounded-xl object-cover h-full w-full"
       />
     </div>
   </div>
