@@ -6,7 +6,7 @@ export default function ServicesSection() {
     <section className="mx-auto px-5 sm:px-20 py-16 text-left" id="about">
       <div>
         {/* Service 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 text-left h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2  text-left h-full">
           {/* Card 1 */}
           <div className=" p-5 sm:p-6 ">
             {/* Heading */}
@@ -17,7 +17,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Subtitle */}
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-gray-700 mb-12 ">
+            <h2 className="text-lg sm:text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-medium text-gray-700 mb-12 ">
               Simplifying Your Finances, <br />
               <span className="text-[#E51D25]">Empowering Your Growth!</span>
             </h2>
