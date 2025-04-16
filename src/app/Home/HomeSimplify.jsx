@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative mx-auto px-5 md:px-16 py-16 flex flex-col md:flex-row gap-8 items-center md:items-start">
       
       {/* Left Background Vertical Text */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-5xl font-bold text-gray-500/10 tracking-widest hidden md:block ml-20 md:ml-48 ">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-5xl font-bold text-gray-500/10 tracking-widest hidden md:block ml-20 md:ml-52 ">
         YOUTAX INDIA <br/> CONSULTING PVT. LTD.
       </div>
 
@@ -34,8 +34,8 @@ export default function HeroSection() {
       <div className="w-full md:w-[60%] sm:px-10 relative z-10">
         <p className="text-gray-800 text-xl">
           
-          your number one source for all types of <strong>taxation services</strong>.
-          We&apos;re dedicated to giving you the  best of service for the <strong>growth of your business</strong>, with a professional team.
+        Welcome to  <strong>YOUTAX INDIA CONSULTING PVT. LTD. </strong>.
+          your number one source for all types of  <strong>taxation services.</strong>We're dedicated to giving you the best of service for the <strong>growth of your business, </strong>with a professional team.
         </p>
 
         <div className="mt-10">
