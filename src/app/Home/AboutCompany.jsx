@@ -40,7 +40,7 @@ export default function ServicesSection() {
 
           <div className="mt-2">
             <Image
-              src="/assets/aboutCompany-top.png"
+              src="/assets/About1.png"
               alt="Meeting Discussion"
               width={500}
               height={300}
@@ -80,7 +80,7 @@ export default function ServicesSection() {
     {/* Image Section - Reduced Width & Height */}
     <div className="md:w-[35%] mt-2 flex justify-center items-start">
       <Image
-        src="/assets/aboutCompany-bottom.png"
+        src="/assets/About2.png"
         alt="Meeting Discussion"
         width={300}
         height={250}
