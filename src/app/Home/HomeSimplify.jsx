@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative mx-auto px-5 md:px-16 py-16 flex flex-col md:flex-row gap-8 items-center md:items-start">
       
       {/* Left Background Vertical Text */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-5xl font-bold text-gray-500/10 tracking-widest hidden md:block ml-20 md:ml-52 ">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-5xl font-bold text-gray-500/10 tracking-widest hidden md:block ml-20 md:ml-52 2xl:ml-64 ">
         YOUTAX INDIA <br/> CONSULTING PVT. LTD.
       </div>
 
