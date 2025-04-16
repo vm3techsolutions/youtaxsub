@@ -44,7 +44,7 @@ export default function ServicesSection() {
               alt="Meeting Discussion"
               width={500}
               height={300}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover w-full h-full"
             />
           </div>
         </div>
