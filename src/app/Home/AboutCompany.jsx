@@ -6,7 +6,7 @@ export default function ServicesSection() {
     <section className="mx-auto px-5 sm:px-20 py-16 text-left" id="about">
       <div>
         {/* Service 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 text-left h-full">
           {/* Card 1 */}
           <div className=" p-5 sm:p-6 ">
             {/* Heading */}
@@ -40,7 +40,7 @@ export default function ServicesSection() {
 
           <div className="mt-2">
             <Image
-              src="/assets/About1.png"
+              src="/assets/About2.png"
               alt="Meeting Discussion"
               width={500}
               height={300}
@@ -80,7 +80,7 @@ export default function ServicesSection() {
     {/* Image Section - Reduced Width & Height */}
     <div className="md:w-[35%] mt-2 flex justify-center items-start">
       <Image
-        src="/assets/About2.png"
+        src="/assets/About1.png"
         alt="Meeting Discussion"
         width={300}
         height={250}
