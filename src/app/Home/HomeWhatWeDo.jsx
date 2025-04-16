@@ -1,7 +1,7 @@
 "use client";
 export default function ServicesSection() {
   return (
-    <section className="mx-auto px-5 sm:px-20 py-16 text-center">
+    <section className="mx-auto px-5 sm:px-16 py-16 text-center">
       
       {/* Heading */}
       <div className="mb-6">
@@ -12,7 +12,7 @@ export default function ServicesSection() {
 
       {/* Subtitle */}
       <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-gray-700 mb-12 px-2">
-        Expert Help, Zero Stress, Maximum Savings.
+      Expert Help | Zero Stress | Maximum Savings
       </h2>
 
       {/* Service Cards */}
