@@ -44,7 +44,7 @@ export default function HeroSection() {
             alt="Meeting Discussion"
             width={500}
             height={300}
-            className="rounded-xl object-cover w-full"
+            className="rounded-xl object-cover w-full 2xl:h-[80vh]"
           />
         </div>
       </div>
