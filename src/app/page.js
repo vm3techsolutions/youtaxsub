@@ -1,6 +1,7 @@
 import AboutCompany from "./Home/AboutCompany";
 import HomeSimplify from "./Home/HomeSimplify";
 import HomeWhatWeDo from "./Home/HomeWhatWeDo";
+import Plan from "./Home/Plans/Plan";
 import Testimonial from "./Home/Testimonial";
 import WhyChooseUs from "./Home/WhyChooseUs";
 import WhyUs from "./Home/WhyUs";
@@ -14,6 +15,7 @@ export default function Home(){
       <WhyUs/>
       <WhyChooseUs/>
       <Testimonial/>
+      <Plan/>
     </div>
   )
 }
