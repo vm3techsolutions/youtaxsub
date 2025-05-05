@@ -45,7 +45,7 @@ export default function Plans() {
   ];
 
   return (
-    <section className="mx-auto px-5 sm:px-20 py-16 text-center ">
+    <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center ">
         <div>
         <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ">
           Our Plans

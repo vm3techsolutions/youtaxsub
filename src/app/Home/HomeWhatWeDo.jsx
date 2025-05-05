@@ -67,9 +67,9 @@ export default function ServicesSection() {
           </div>
          
         </div>
-        <Link href="/Plans">
-            <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
-              Learn More
+        <Link href="#Plans">
+            <button className="mt-auto text-center bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
+              Book Now
             </button>
           </Link>
       </div>
