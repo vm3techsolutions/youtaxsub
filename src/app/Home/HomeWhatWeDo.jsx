@@ -67,12 +67,15 @@ export default function ServicesSection() {
           </div>
          
         </div>
-        <Link href="/Plans">
+        
+      </div>
+      <div className="flex justify-center pt-20">
+        <Link href="/#plan">
             <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
               Learn More
             </button>
           </Link>
-      </div>
+          </div>
     </section>
   );
 }
