@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 export default function ServicesSection() {
   return (
-    <section className="mx-auto px-5 sm:px-20 py-16 text-center" id="about">
+    <section className="mx-auto px-5 sm:px-20 py-16 text-left" id="about">
       <div>
         {/* Service 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2  text-left h-full">
