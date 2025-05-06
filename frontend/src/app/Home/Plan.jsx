@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { handleRazorpayPayment } from "../checkout/checkout"; // Import the Razorpay function
 
 export default function Plans() {
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function Plans() {
         "No Commitment",
       ],
       link: "/checkout?plan=daily",
+      amount: 49, // Add amount for Razorpay (in INR)
     },
     {
       title: "Monthly Plan",
@@ -29,6 +31,7 @@ export default function Plans() {
         "Save 20%",
       ],
       link: "/checkout?plan=monthly",
+      amount: 499, // Add amount for Razorpay
     },
     {
       title: "Yearly Plan",
@@ -41,18 +44,17 @@ export default function Plans() {
         "Save 60%",
       ],
       link: "/checkout?plan=yearly",
+      amount: 4999, // Add amount for Razorpay
     },
   ];
 
   return (
     <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center ">
-        <div>
+      <div>
         <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ">
           Our Plans
         </h1>
       </div>
-      {/* <h2 className="text-3xl font-bold text-gray-800 mb-3">Simple, Transparent Pricing</h2>
-      <p className="text-lg text-gray-600 mb-12">No hidden fees. No surprises.</p> */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
         {plans.map((plan) => (
@@ -75,7 +77,7 @@ export default function Plans() {
             </div>
 
             <button
-              onClick={() => router.push(plan.link)}
+              onClick={() => handleRazorpayPayment(plan.title, plan.amount)}
               className="mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition"
             >
               Choose Plan
