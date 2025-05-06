@@ -10,6 +10,8 @@ backend/node_modules
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+frontend/package-lock.json
+backend/package-lock.json
 
 # testing
 /coverage
@@ -32,8 +34,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-frontend/.env
-backend/.env
+.env*
 
 # vercel
 .vercel
@@ -41,3 +42,7 @@ backend/.env
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+frontend/.env
+backend/.env

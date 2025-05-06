@@ -1,37 +1,28 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { handleRazorpayPayment } from "../checkout/checkout"; // Import the Razorpay function
+import { useState } from "react";
+import { handleRazorpayPayment } from "../checkout/checkout";
 
 export default function Plans() {
-  const router = useRouter();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
   const plans = [
     {
       title: "Daily Plan",
       price: "₹49",
       duration: "Per Day",
-      features: [
-        "1-Day Access",
-        "Basic Support",
-        "Instant Filing",
-        "No Commitment",
-      ],
-      link: "/checkout?plan=daily",
-      amount: 49, // Add amount for Razorpay (in INR)
+      features: ["1-Day Access", "Basic Support", "Instant Filing", "No Commitment"],
+      amount: 49,
     },
     {
       title: "Monthly Plan",
       price: "₹499",
       duration: "Per Month",
-      features: [
-        "30-Day Access",
-        "Priority Support",
-        "GST & Tax Filing",
-        "Save 20%",
-      ],
-      link: "/checkout?plan=monthly",
-      amount: 499, // Add amount for Razorpay
+      features: ["30-Day Access", "Priority Support", "GST & Tax Filing", "Save 20%"],
+      amount: 499,
     },
     {
       title: "Yearly Plan",
@@ -43,18 +34,28 @@ export default function Plans() {
         "ROC + GST + Tax Filing",
         "Save 60%",
       ],
-      link: "/checkout?plan=yearly",
-      amount: 4999, // Add amount for Razorpay
+      amount: 4999,
     },
   ];
 
+  const openModal = (plan) => {
+    setSelectedPlan(plan);
+    setModalOpen(true);
+  };
+
+  const handlePayment = () => {
+    if (!userName || !userEmail) return alert("Please enter your name and email.");
+    handleRazorpayPayment(selectedPlan.title, selectedPlan.amount, userName, userEmail);
+    setModalOpen(false);
+    setUserName("");
+    setUserEmail("");
+  };
+
   return (
-    <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center ">
-      <div>
-        <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ">
-          Our Plans
-        </h1>
-      </div>
+    <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center">
+      <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block">
+        Our Plans
+      </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
         {plans.map((plan) => (
@@ -68,16 +69,14 @@ export default function Plans() {
               </h3>
               <p className="text-3xl font-bold text-black mb-1">{plan.price}</p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
-
               <ul className="list-disc list-inside space-y-2 text-gray-700 font-medium">
                 {plan.features.map((feature, i) => (
                   <li key={i}>✅ {feature}</li>
                 ))}
               </ul>
             </div>
-
             <button
-              onClick={() => handleRazorpayPayment(plan.title, plan.amount)}
+              onClick={() => openModal(plan)}
               className="mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition"
             >
               Choose Plan
@@ -85,6 +84,43 @@ export default function Plans() {
           </div>
         ))}
       </div>
+
+      {/* Modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white p-6 rounded-lg w-full max-w-md text-left">
+            <h2 className="text-xl font-semibold mb-4">Enter Your Details</h2>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-2 mb-3 border rounded"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-2 mb-4 border rounded"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
+            />
+            <div className="flex justify-end space-x-2">
+              <button
+                className="bg-gray-300 text-black px-4 py-2 rounded"
+                onClick={() => setModalOpen(false)}
+              >
+                Cancel
+              </button>
+              <button
+                className="bg-[#E51D25] text-white px-4 py-2 rounded"
+                onClick={handlePayment}
+              >
+                Proceed to Pay
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

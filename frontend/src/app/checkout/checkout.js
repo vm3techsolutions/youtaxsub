@@ -1,31 +1,32 @@
-// This function triggers the Razorpay Checkout popup
-export const handleRazorpayPayment = (planId, amount) => {
+export async function handleRazorpayPayment(planName, amount, userName, userEmail) {
+    const res = await fetch("/api/razorpay/create-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ amount }),
+    });
+  
+    const order = await res.json();
+  
     const options = {
-      key: "YOUR_RAZORPAY_KEY", // Your Razorpay public key
-      amount: amount * 100, // Amount in paise (₹1 = 100 paise)
-      currency: "INR", // Currency code
-      name: "YouTax", // Your company name
-      description: `Payment for ${planId} plan`,
-      image: "/path/to/your/logo.png", // Your logo path (optional)
+      key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+      amount: order.amount,
+      currency: order.currency,
+      name: "YouTax",
+      description: planName,
+      order_id: order.id,
       handler: function (response) {
-        // Handle successful payment here, you can send the response to your backend
-        alert("Payment Successful: " + response.razorpay_payment_id);
-        // You can redirect or show success page here
+        alert(`Payment successful: ${response.razorpay_payment_id}`);
       },
       prefill: {
-        name: "", // User name
-        email: "", // User email
-        contact: "", // User contact number
-      },
-      notes: {
-        plan_id: planId,
+        name: userName,
+        email: userEmail,
       },
       theme: {
-        color: "#E51D25", // Customize theme color
+        color: "#E51D25",
       },
     };
   
-    const rzp = new window.Razorpay(options);
-    rzp.open();
-  };
+    const razorpay = new window.Razorpay(options);
+    razorpay.open();
+  }
   
