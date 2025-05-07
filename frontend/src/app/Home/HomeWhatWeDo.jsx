@@ -42,7 +42,7 @@ export default function ServicesSection() {
               is available to assist you, whether you need an accountant for a day, for a month or yearly basis.
             </p>
 
-            <div className="pt-5">
+            <div className="pt-20">
         <Link href="/#Plans">
             <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
               Book Now

@@ -959,16 +959,6 @@
     background-color: var(--color-gray-500);
   }
 
-  .bg-gray-500\/10 {
-    background-color: #6a72821a;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-gray-500\/10 {
-      background-color: color-mix(in oklab, var(--color-gray-500) 10%, transparent);
-    }
-  }
-
   .bg-gray-600 {
     background-color: var(--color-gray-600);
   }
@@ -1063,6 +1053,10 @@
 
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+
+  .pt-15 {
+    padding-top: calc(var(--spacing) * 15);
   }
 
   .pt-20 {
@@ -1359,10 +1353,6 @@
       --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, #0000001a), 0 8px 10px -6px var(--tw-shadow-color, #0000001a);
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
-  }
-
-  .focus\:ring-gray-500:focus {
-    --tw-ring-color: var(--color-gray-500);
   }
 
   .focus\:outline-none:focus {
