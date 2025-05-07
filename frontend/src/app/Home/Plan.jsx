@@ -1,5 +1,4 @@
 "use client";
-
 import { useRouter } from "next/navigation";
 
 export default function Plans() {
@@ -46,13 +45,11 @@ export default function Plans() {
 
   return (
     <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center ">
-        <div>
+      <div>
         <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ">
           Our Plans
         </h1>
       </div>
-      {/* <h2 className="text-3xl font-bold text-gray-800 mb-3">Simple, Transparent Pricing</h2>
-      <p className="text-lg text-gray-600 mb-12">No hidden fees. No surprises.</p> */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
         {plans.map((plan) => (
@@ -67,9 +64,29 @@ export default function Plans() {
               <p className="text-3xl font-bold text-black mb-1">{plan.price}</p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
 
-              <ul className="list-disc list-inside space-y-2 text-gray-700 font-medium">
+              <ul className="list-none list-inside space-y-4 text-gray-700 font-medium text-lg">
                 {plan.features.map((feature, i) => (
-                  <li key={i}>✅ {feature}</li>
+                  <li key={i} className="flex items-center">
+                    <span
+                      className="w-5 h-5 flex justify-center items-center bg-gray-500 text-white rounded-sm mr-3"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </span>
+                    {feature}
+                  </li>
                 ))}
               </ul>
             </div>

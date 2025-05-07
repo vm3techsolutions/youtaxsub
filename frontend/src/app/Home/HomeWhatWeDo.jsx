@@ -41,6 +41,14 @@ export default function ServicesSection() {
               based on your needs and financial constraints. Our staff of seasoned Chartered Accountants (CAs)
               is available to assist you, whether you need an accountant for a day, for a month or yearly basis.
             </p>
+
+            <div className="pt-5">
+        <Link href="/#Plans">
+            <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
+              Book Now
+            </button>
+          </Link>
+          </div>
           </div>
          
         </div>
@@ -64,18 +72,20 @@ export default function ServicesSection() {
               Our comprehensive business consulting services are designed to support entrepreneurs and established businesses throughout their journey. From initial registration to ongoing compliance, we offer a range of solutions tailored to your needs.
               Our team of experienced professionals is committed to providing personalized solutions to meet your business's unique requirements. Whether you're starting a new venture or looking to optimize your existing operations, we're here to help you achieve your goals.
             </p>
+
+            <div className="pt-5">
+        <Link href="https://forms.gle/66iTHgUTjt9x5pnw9">
+            <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
+              Enquiry Now
+            </button>
+          </Link>
+          </div>
           </div>
          
         </div>
         
       </div>
-      <div className="flex justify-center pt-20">
-        <Link href="/#Plans">
-            <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
-              Book Now
-            </button>
-          </Link>
-          </div>
+      
     </section>
   );
 }
