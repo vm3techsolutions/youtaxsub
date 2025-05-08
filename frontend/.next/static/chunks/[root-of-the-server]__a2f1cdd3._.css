@@ -816,6 +816,10 @@
     list-style-position: inside;
   }
 
+  .list-decimal {
+    list-style-type: decimal;
+  }
+
   .list-disc {
     list-style-type: disc;
   }
@@ -1131,6 +1135,10 @@
 
   .pt-26 {
     padding-top: calc(var(--spacing) * 26);
+  }
+
+  .pl-6 {
+    padding-left: calc(var(--spacing) * 6);
   }
 
   .text-center {

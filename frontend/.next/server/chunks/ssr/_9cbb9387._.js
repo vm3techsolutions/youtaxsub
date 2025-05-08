@@ -857,33 +857,38 @@ function Plans() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-center py-10",
+                className: "text-left py-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-xl",
+                        className: "text-2xl font-semibold",
+                        children: "Note -"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/Home/Plan.jsx",
+                        lineNumber: 117,
+                        columnNumber: 3
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "list-decimal pl-6 text-xl space-y-2",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                className: "text-3xl",
-                                children: " Note :"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: "Entries include Sales Bills, Purchase Bills, and Bank Account Statements."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 117,
-                                columnNumber: 30
+                                lineNumber: 121,
+                                columnNumber: 5
                             }, this),
-                            " Entries include Sales Bills, Purchase Bills, and Bank Account Statements."
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: "The prices mentioned are subject to change. Please refer to our latest pricing details."
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/Home/Plan.jsx",
+                                lineNumber: 124,
+                                columnNumber: 5
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Home/Plan.jsx",
-                        lineNumber: 117,
-                        columnNumber: 7
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-xl",
-                        children: "The prices mentioned are subject to change. Please refer to our latest pricing details."
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Home/Plan.jsx",
                         lineNumber: 120,
-                        columnNumber: 8
+                        columnNumber: 3
                     }, this)
                 ]
             }, void 0, true, {

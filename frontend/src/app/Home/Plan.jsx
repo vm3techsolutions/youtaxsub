@@ -113,14 +113,20 @@ export default function Plans() {
         ))}
         
       </div>
-      <div className="text-center py-10">
-      <p className="text-xl"><strong className="text-3xl"> Note :</strong> Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
+      <div className="text-left py-10">
+  <p className="text-2xl font-semibold">
+    Note -
+  </p>
+  <ul className="list-decimal pl-6 text-xl space-y-2">
+    <li>
+      Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
+    </li>
+    <li>
+      The prices mentioned are subject to change. Please refer to our latest pricing details.
+    </li>
+  </ul>
+</div>
 
-       </p>
-       <p  className="text-xl">
-         The prices mentioned are subject to change. Please refer to our latest pricing details.
-       </p>
-       </div>
     </section>
   );
 }
