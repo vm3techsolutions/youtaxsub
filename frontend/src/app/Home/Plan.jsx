@@ -6,38 +6,47 @@ export default function Plans() {
 
   const plans = [
     {
-      title: "Daily Plan",
-      price: "₹49",
+      title: "1-Day Visit",
+      price: "₹2000",
       duration: "Per Day",
       features: [
         "1-Day Access",
-        "Basic Support",
-        "Instant Filing",
-        "No Commitment",
+        "Up to 250 entries/day",
+        "1 Bookkeeping Officers (On site) ",
+        "1 Accountant",
+        "Technical Team"
       ],
       link: "/checkout?plan=daily",
     },
     {
       title: "Monthly Plan",
-      price: "₹499",
+      price: "₹7000",
       duration: "Per Month",
       features: [
-        "30-Day Access",
-        "Priority Support",
-        "GST & Tax Filing",
-        "Save 20%",
+        "4-Day Access",
+        "Up to 1000 entries/month",
+        "GST Return",
+        "TDS Return",
+        " Income Tax Return without Audit",
+        "1 Bookkeeping Officers (On site) ",
+        "1 Accountant",
+        "Technical Team"
       ],
       link: "/checkout?plan=monthly",
     },
     {
       title: "Yearly Plan",
-      price: "₹4999",
+      price: "₹60,000",
       duration: "Per Year",
       features: [
-        "365-Day Access",
-        "Dedicated Compliance Manager",
-        "ROC + GST + Tax Filing",
-        "Save 60%",
+        "48-Day Access",
+        "Up to 18,000 entries/year",
+        "GST Return",
+        "TDS Return",
+        " Income Tax Return without Audit",
+        "1 Bookkeeping Officers (On site) ",
+        "1 Accountant",
+        "Technical Team"
       ],
       link: "/checkout?plan=yearly",
     },
@@ -68,7 +77,7 @@ export default function Plans() {
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
                     <span
-                      className="w-5 h-5 flex justify-center items-center bg-gray-500 text-white rounded-sm mr-3"
+                      className="w-5 h-5 flex justify-center items-center bg-green-500 text-white rounded-sm mr-3"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
