@@ -14,7 +14,8 @@ export default function Plans() {
         "Up to 250 entries/day",
         "1 Bookkeeping Officers (On site) ",
         "1 Accountant",
-        "Technical Team"
+        "Technical Team",
+        "Technical Team Support "
       ],
       link: "/checkout?plan=daily",
     },
@@ -30,7 +31,8 @@ export default function Plans() {
         " Income Tax Return without Audit",
         "1 Bookkeeping Officers (On site) ",
         "1 Accountant",
-        "Technical Team"
+        "Technical Team",
+        "Technical Team Support "
       ],
       link: "/checkout?plan=monthly",
     },
@@ -46,7 +48,8 @@ export default function Plans() {
         " Income Tax Return without Audit",
         "1 Bookkeeping Officers (On site) ",
         "1 Accountant",
-        "Technical Team"
+        "Technical Team",
+        "Technical Team Support "
       ],
       link: "/checkout?plan=yearly",
     },
@@ -108,7 +111,16 @@ export default function Plans() {
             </button>
           </div>
         ))}
+        
       </div>
+      <div className="text-center py-10">
+      <p className="text-xl"><strong className="text-3xl"> Note :</strong> Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
+
+       </p>
+       <p  className="text-xl">
+         The prices mentioned are subject to change. Please refer to our latest pricing details.
+       </p>
+       </div>
     </section>
   );
 }

@@ -716,7 +716,8 @@ function Plans() {
                 "Up to 250 entries/day",
                 "1 Bookkeeping Officers (On site) ",
                 "1 Accountant",
-                "Technical Team"
+                "Technical Team",
+                "Technical Team Support "
             ],
             link: "/checkout?plan=daily"
         },
@@ -732,7 +733,8 @@ function Plans() {
                 " Income Tax Return without Audit",
                 "1 Bookkeeping Officers (On site) ",
                 "1 Accountant",
-                "Technical Team"
+                "Technical Team",
+                "Technical Team Support "
             ],
             link: "/checkout?plan=monthly"
         },
@@ -748,7 +750,8 @@ function Plans() {
                 " Income Tax Return without Audit",
                 "1 Bookkeeping Officers (On site) ",
                 "1 Accountant",
-                "Technical Team"
+                "Technical Team",
+                "Technical Team Support "
             ],
             link: "/checkout?plan=yearly"
         }
@@ -763,12 +766,12 @@ function Plans() {
                     children: "Our Plans"
                 }, void 0, false, {
                     fileName: "[project]/src/app/Home/Plan.jsx",
-                    lineNumber: 58,
+                    lineNumber: 61,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 57,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -783,7 +786,7 @@ function Plans() {
                                         children: plan.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 70,
+                                        lineNumber: 73,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -791,7 +794,7 @@ function Plans() {
                                         children: plan.price
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 73,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -799,7 +802,7 @@ function Plans() {
                                         children: plan.duration
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 77,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -822,35 +825,35 @@ function Plans() {
                                                                 d: "M5 13l4 4L19 7"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                                                lineNumber: 89,
+                                                                lineNumber: 92,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Home/Plan.jsx",
-                                                            lineNumber: 82,
+                                                            lineNumber: 85,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                                        lineNumber: 79,
+                                                        lineNumber: 82,
                                                         columnNumber: 21
                                                     }, this),
                                                     feature
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                                lineNumber: 78,
+                                                lineNumber: 81,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 76,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 69,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -859,24 +862,59 @@ function Plans() {
                                 children: "Choose Plan"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 103,
+                                lineNumber: 106,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, plan.title, true, {
                         fileName: "[project]/src/app/Home/Plan.jsx",
-                        lineNumber: 65,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 63,
+                lineNumber: 66,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-center py-10",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-xl",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                className: "text-3xl",
+                                children: " Note :"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/Home/Plan.jsx",
+                                lineNumber: 117,
+                                columnNumber: 30
+                            }, this),
+                            " Entries include Sales Bills, Purchase Bills, and Bank Account Statements."
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/Home/Plan.jsx",
+                        lineNumber: 117,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-xl",
+                        children: "The prices mentioned are subject to change. Please refer to our latest pricing details."
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/Home/Plan.jsx",
+                        lineNumber: 120,
+                        columnNumber: 8
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/Home/Plan.jsx",
+                lineNumber: 116,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/Home/Plan.jsx",
-        lineNumber: 56,
+        lineNumber: 59,
         columnNumber: 5
     }, this);
 }
