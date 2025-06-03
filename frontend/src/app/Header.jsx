@@ -51,7 +51,7 @@ export default function Header() {
 
       {/* Mobile Menu - Visible on Mobile */}
       {isMenuOpen && (
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white w-full rounded-b-2xl shadow-lg md:hidden">
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-black w-full rounded-b-2xl shadow-lg md:hidden">
           <nav className="flex flex-col items-center py-4 text-gray-800 font-medium space-y-4 mt-8">
             <Link href="/" className="py-2">HOME</Link>
             <Link href="/#about" className="py-2">ABOUT</Link>
