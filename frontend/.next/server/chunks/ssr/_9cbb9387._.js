@@ -681,7 +681,8 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
-"use client";
+'use client';
+;
 ;
 ;
 function Plans() {
@@ -689,74 +690,123 @@ function Plans() {
     const plans = [
         {
             title: "1-Day Visit",
-            price: "₹2000",
+            price: 2000,
             duration: "Per Day",
             features: [
                 "1-Day Access",
                 "Up to 250 entries/day",
-                "1 Bookkeeping Officers (On site) ",
+                "1 Bookkeeping Officers (On site)",
                 "1 Accountant",
-                "Technical Team",
-                "Technical Team Support "
-            ],
-            link: "/checkout?plan=daily"
+                "Technical Team",
+                "Technical Team Support"
+            ]
         },
         {
             title: "Monthly Plan",
-            price: "₹7000",
+            price: 7000,
             duration: "Per Month",
             features: [
                 "4-Day Access",
                 "Up to 1000 entries/month",
                 "GST Return",
                 "TDS Return",
-                " Income Tax Return without Audit",
-                "1 Bookkeeping Officers (On site) ",
+                "Income Tax Return without Audit",
+                "1 Bookkeeping Officers (On site)",
                 "1 Accountant",
-                "Technical Team",
-                "Technical Team Support "
-            ],
-            link: "/checkout?plan=monthly"
+                "Technical Team",
+                "Technical Team Support"
+            ]
         },
         {
             title: "Yearly Plan",
-            price: "₹60,000",
+            price: 60000,
             duration: "Per Year",
             features: [
                 "48-Day Access",
                 "Up to 18,000 entries/year",
                 "GST Return",
                 "TDS Return",
-                " Income Tax Return without Audit",
-                "1 Bookkeeping Officers (On site) ",
+                "Income Tax Return without Audit",
+                "1 Bookkeeping Officers (On site)",
                 "1 Accountant",
-                "Technical Team",
-                "Technical Team Support "
-            ],
-            link: "/checkout?plan=yearly"
+                "Technical Team",
+                "Technical Team Support"
+            ]
         }
     ];
+    const loadRazorpay = ()=>{
+        return new Promise((resolve)=>{
+            const script = document.createElement('script');
+            script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+            script.onload = ()=>resolve(true);
+            script.onerror = ()=>resolve(false);
+            document.body.appendChild(script);
+        });
+    };
+    const handlePayment = async (plan)=>{
+        const loaded = await loadRazorpay();
+        if (!loaded) {
+            alert('Razorpay SDK failed to load.');
+            return;
+        }
+        const res = await fetch('http://localhost:5000/api/payment/create-order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                amount: plan.price
+            })
+        });
+        const data = await res.json();
+        if (!data?.order) {
+            alert('Failed to create order');
+            return;
+        }
+        const options = {
+            key: ("TURBOPACK compile-time value", "rzp_test_U2ei3S5jnNsS3H"),
+            amount: data.order.amount,
+            currency: data.order.currency,
+            name: 'Your Company Name',
+            description: plan.title,
+            order_id: data.order.id,
+            handler: function(response) {
+                alert('Payment successful!');
+                console.log(response);
+            },
+            prefill: {
+                name: 'Your Name',
+                email: 'email@example.com',
+                contact: '9999999999'
+            },
+            theme: {
+                color: '#E51D25'
+            }
+        };
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "Plans",
-        className: "mx-auto px-5 sm:px-20 py-16 text-center ",
+        className: "mx-auto px-5 sm:px-20 py-16 text-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    className: "bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ",
+                    className: "bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block",
                     children: "Our Plans"
                 }, void 0, false, {
                     fileName: "[project]/src/app/Home/Plan.jsx",
-                    lineNumber: 61,
+                    lineNumber: 114,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 60,
+                lineNumber: 113,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left",
-                children: plans.map((plan)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: plans.map((plan, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "border border-[#E51D25] rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col justify-between bg-white",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -766,15 +816,18 @@ function Plans() {
                                         children: plan.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 73,
+                                        lineNumber: 126,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-3xl font-bold text-black mb-1",
-                                        children: plan.price
-                                    }, void 0, false, {
+                                        children: [
+                                            "₹",
+                                            plan.price
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 76,
+                                        lineNumber: 129,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -782,7 +835,7 @@ function Plans() {
                                         children: plan.duration
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 77,
+                                        lineNumber: 130,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -799,61 +852,61 @@ function Plans() {
                                                             stroke: "currentColor",
                                                             className: "w-4 h-4",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                "stroke-linecap": "round",
-                                                                "stroke-linejoin": "round",
-                                                                "stroke-width": "2",
+                                                                strokeLinecap: "round",
+                                                                strokeLinejoin: "round",
+                                                                strokeWidth: "2",
                                                                 d: "M5 13l4 4L19 7"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                                                lineNumber: 92,
+                                                                lineNumber: 143,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Home/Plan.jsx",
-                                                            lineNumber: 85,
+                                                            lineNumber: 136,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                                        lineNumber: 82,
+                                                        lineNumber: 135,
                                                         columnNumber: 21
                                                     }, this),
                                                     feature
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                                lineNumber: 81,
+                                                lineNumber: 134,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 79,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 72,
+                                lineNumber: 125,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>router.push(plan.link),
+                                onClick: ()=>handlePayment(plan),
                                 className: "mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition",
                                 children: "Choose Plan"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 106,
+                                lineNumber: 157,
                                 columnNumber: 13
                             }, this)
                         ]
-                    }, plan.title, true, {
+                    }, index, true, {
                         fileName: "[project]/src/app/Home/Plan.jsx",
-                        lineNumber: 68,
+                        lineNumber: 121,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 66,
+                lineNumber: 119,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -864,8 +917,8 @@ function Plans() {
                         children: "Note -"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Home/Plan.jsx",
-                        lineNumber: 117,
-                        columnNumber: 3
+                        lineNumber: 168,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                         className: "list-decimal pl-6 text-xl space-y-2",
@@ -874,32 +927,32 @@ function Plans() {
                                 children: "Entries include Sales Bills, Purchase Bills, and Bank Account Statements."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 121,
-                                columnNumber: 5
+                                lineNumber: 170,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: "The prices mentioned are subject to change. Please refer to our latest pricing details."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 124,
-                                columnNumber: 5
+                                lineNumber: 173,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Home/Plan.jsx",
-                        lineNumber: 120,
-                        columnNumber: 3
+                        lineNumber: 169,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 116,
+                lineNumber: 167,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/Home/Plan.jsx",
-        lineNumber: 59,
+        lineNumber: 112,
         columnNumber: 5
     }, this);
 }
