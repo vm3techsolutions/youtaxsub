@@ -549,6 +549,28 @@ function ServicesSection() {
                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
                                     lineNumber: 38,
                                     columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "pt-20",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/#Plans",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2",
+                                            children: "Book Now"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                            lineNumber: 47,
+                                            columnNumber: 13
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                        lineNumber: 46,
+                                        columnNumber: 9
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                    lineNumber: 45,
+                                    columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
@@ -576,7 +598,7 @@ function ServicesSection() {
                                                     children: "02"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                                    lineNumber: 53,
+                                                    lineNumber: 61,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -584,26 +606,26 @@ function ServicesSection() {
                                                     children: "End-To-End Business Consulting"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                                    lineNumber: 56,
+                                                    lineNumber: 64,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 60,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-28 sm:w-40 md:w-64 h-[2px] bg-white mt-2 ml-14 sm:ml-12 md:ml-14"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                            lineNumber: 60,
+                                            lineNumber: 68,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                    lineNumber: 51,
+                                    lineNumber: 59,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -611,46 +633,46 @@ function ServicesSection() {
                                     children: "Our comprehensive business consulting services are designed to support entrepreneurs and established businesses throughout their journey. From initial registration to ongoing compliance, we offer a range of solutions tailored to your needs. Our team of experienced professionals is committed to providing personalized solutions to meet your business's unique requirements. Whether you're starting a new venture or looking to optimize your existing operations, we're here to help you achieve your goals."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                    lineNumber: 63,
+                                    lineNumber: 71,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "pt-5",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "https://forms.gle/66iTHgUTjt9x5pnw9",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2",
+                                            children: "Enquiry Now"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                            lineNumber: 78,
+                                            columnNumber: 13
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                        lineNumber: 77,
+                                        columnNumber: 9
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                            lineNumber: 50,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                        lineNumber: 49,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
                 lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center pt-20",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    href: "/#Plans",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2",
-                        children: "Book Now"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                        lineNumber: 74,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                    lineNumber: 73,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                lineNumber: 72,
                 columnNumber: 7
             }, this)
         ]
@@ -677,58 +699,61 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module './checkout'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
-;
 ;
 function Plans() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const plans = [
         {
-            title: "Daily Plan",
-            price: "₹49",
+            title: "1-Day Visit",
+            price: "₹2000",
             duration: "Per Day",
             features: [
                 "1-Day Access",
-                "Basic Support",
-                "Instant Filing",
-                "No Commitment"
+                "Up to 250 entries/day",
+                "1 Bookkeeping Officers (On site) ",
+                "1 Accountant",
+                "Technical Team",
+                "Technical Team Support "
             ],
-            link: "/checkout?plan=daily",
-            amount: 49
+            link: "/checkout?plan=daily"
         },
         {
             title: "Monthly Plan",
-            price: "₹499",
+            price: "₹7000",
             duration: "Per Month",
             features: [
-                "30-Day Access",
-                "Priority Support",
-                "GST & Tax Filing",
-                "Save 20%"
+                "4-Day Access",
+                "Up to 1000 entries/month",
+                "GST Return",
+                "TDS Return",
+                " Income Tax Return without Audit",
+                "1 Bookkeeping Officers (On site) ",
+                "1 Accountant",
+                "Technical Team",
+                "Technical Team Support "
             ],
-            link: "/checkout?plan=monthly",
-            amount: 499
+            link: "/checkout?plan=monthly"
         },
         {
             title: "Yearly Plan",
-            price: "₹4999",
+            price: "₹60,000",
             duration: "Per Year",
             features: [
-                "365-Day Access",
-                "Dedicated Compliance Manager",
-                "ROC + GST + Tax Filing",
-                "Save 60%"
+                "48-Day Access",
+                "Up to 18,000 entries/year",
+                "GST Return",
+                "TDS Return",
+                " Income Tax Return without Audit",
+                "1 Bookkeeping Officers (On site) ",
+                "1 Accountant",
+                "Technical Team",
+                "Technical Team Support "
             ],
-            link: "/checkout?plan=yearly",
-            amount: 4999
+            link: "/checkout?plan=yearly"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -741,12 +766,12 @@ function Plans() {
                     children: "Our Plans"
                 }, void 0, false, {
                     fileName: "[project]/src/app/Home/Plan.jsx",
-                    lineNumber: 54,
+                    lineNumber: 61,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 53,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -761,7 +786,7 @@ function Plans() {
                                         children: plan.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 66,
+                                        lineNumber: 73,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -769,7 +794,7 @@ function Plans() {
                                         children: plan.price
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 69,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -777,56 +802,124 @@ function Plans() {
                                         children: plan.duration
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 70,
+                                        lineNumber: 77,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                        className: "list-disc list-inside space-y-2 text-gray-700 font-medium",
+                                        className: "list-none list-inside space-y-4 text-gray-700 font-medium text-lg",
                                         children: plan.features.map((feature, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                className: "flex items-center",
                                                 children: [
-                                                    "✅ ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "w-5 h-5 flex justify-center items-center bg-green-500 text-white rounded-sm mr-3",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                            xmlns: "http://www.w3.org/2000/svg",
+                                                            fill: "none",
+                                                            viewBox: "0 0 24 24",
+                                                            stroke: "currentColor",
+                                                            className: "w-4 h-4",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                "stroke-linecap": "round",
+                                                                "stroke-linejoin": "round",
+                                                                "stroke-width": "2",
+                                                                d: "M5 13l4 4L19 7"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/Home/Plan.jsx",
+                                                                lineNumber: 92,
+                                                                columnNumber: 25
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/Home/Plan.jsx",
+                                                            lineNumber: 85,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Home/Plan.jsx",
+                                                        lineNumber: 82,
+                                                        columnNumber: 21
+                                                    }, this),
                                                     feature
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                                lineNumber: 74,
+                                                lineNumber: 81,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Home/Plan.jsx",
-                                        lineNumber: 72,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 65,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>handleRazorpayPayment(plan.title, plan.amount),
+                                onClick: ()=>router.push(plan.link),
                                 className: "mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition",
                                 children: "Choose Plan"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Home/Plan.jsx",
-                                lineNumber: 79,
+                                lineNumber: 106,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, plan.title, true, {
                         fileName: "[project]/src/app/Home/Plan.jsx",
-                        lineNumber: 61,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/Home/Plan.jsx",
-                lineNumber: 59,
+                lineNumber: 66,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-left py-10",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-2xl font-semibold",
+                        children: "Note -"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/Home/Plan.jsx",
+                        lineNumber: 117,
+                        columnNumber: 3
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "list-decimal pl-6 text-xl space-y-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: "Entries include Sales Bills, Purchase Bills, and Bank Account Statements."
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/Home/Plan.jsx",
+                                lineNumber: 121,
+                                columnNumber: 5
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: "The prices mentioned are subject to change. Please refer to our latest pricing details."
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/Home/Plan.jsx",
+                                lineNumber: 124,
+                                columnNumber: 5
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/Home/Plan.jsx",
+                        lineNumber: 120,
+                        columnNumber: 3
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/Home/Plan.jsx",
+                lineNumber: 116,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/Home/Plan.jsx",
-        lineNumber: 52,
+        lineNumber: 59,
         columnNumber: 5
     }, this);
 }

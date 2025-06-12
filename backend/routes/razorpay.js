@@ -12,7 +12,7 @@ const razorpay  = new Razorpay({
 
 //Define POST API endpoint to create orders
 
-router.post("/create_order", async (req, res) => {
+router.post("/create-order", async (req, res) => {
     const {amount} = req.body;
 
     try {

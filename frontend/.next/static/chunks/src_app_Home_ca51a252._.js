@@ -17,7 +17,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 function ServicesSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "mx-auto px-5 sm:px-20 py-16 text-center",
+        className: "mx-auto px-5 sm:px-20 py-16 text-left",
         id: "about",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -549,6 +549,28 @@ function ServicesSection() {
                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
                                     lineNumber: 38,
                                     columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "pt-20",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/#Plans",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2",
+                                            children: "Book Now"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                            lineNumber: 47,
+                                            columnNumber: 13
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                        lineNumber: 46,
+                                        columnNumber: 9
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                    lineNumber: 45,
+                                    columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
@@ -576,7 +598,7 @@ function ServicesSection() {
                                                     children: "02"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                                    lineNumber: 53,
+                                                    lineNumber: 61,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -584,26 +606,26 @@ function ServicesSection() {
                                                     children: "End-To-End Business Consulting"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                                    lineNumber: 56,
+                                                    lineNumber: 64,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 60,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-28 sm:w-40 md:w-64 h-[2px] bg-white mt-2 ml-14 sm:ml-12 md:ml-14"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                            lineNumber: 60,
+                                            lineNumber: 68,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                    lineNumber: 51,
+                                    lineNumber: 59,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -611,46 +633,46 @@ function ServicesSection() {
                                     children: "Our comprehensive business consulting services are designed to support entrepreneurs and established businesses throughout their journey. From initial registration to ongoing compliance, we offer a range of solutions tailored to your needs. Our team of experienced professionals is committed to providing personalized solutions to meet your business's unique requirements. Whether you're starting a new venture or looking to optimize your existing operations, we're here to help you achieve your goals."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                                    lineNumber: 63,
+                                    lineNumber: 71,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "pt-5",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "https://forms.gle/66iTHgUTjt9x5pnw9",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2",
+                                            children: "Enquiry Now"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                            lineNumber: 78,
+                                            columnNumber: 13
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                        lineNumber: 77,
+                                        columnNumber: 9
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                            lineNumber: 50,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                        lineNumber: 49,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
                 lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center pt-20",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    href: "/Plans/Plan",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2",
-                        children: "Learn More"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                        lineNumber: 74,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                    lineNumber: 73,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/app/Home/HomeWhatWeDo.jsx",
-                lineNumber: 72,
                 columnNumber: 7
             }, this)
         ]

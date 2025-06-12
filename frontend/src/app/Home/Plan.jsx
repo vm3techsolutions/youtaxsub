@@ -1,61 +1,67 @@
 "use client";
-
-import { useState } from "react";
-import { handleRazorpayPayment } from "../checkout/checkout";
+import { useRouter } from "next/navigation";
 
 export default function Plans() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null);
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
+  const router = useRouter();
 
   const plans = [
     {
-      title: "Daily Plan",
-      price: "₹49",
+      title: "1-Day Visit",
+      price: "₹2000",
       duration: "Per Day",
-      features: ["1-Day Access", "Basic Support", "Instant Filing", "No Commitment"],
-      amount: 49,
+      features: [
+        "1-Day Access",
+        "Up to 250 entries/day",
+        "1 Bookkeeping Officers (On site) ",
+        "1 Accountant",
+        "Technical Team",
+        "Technical Team Support "
+      ],
+      link: "/checkout?plan=daily",
     },
     {
       title: "Monthly Plan",
-      price: "₹499",
+      price: "₹7000",
       duration: "Per Month",
-      features: ["30-Day Access", "Priority Support", "GST & Tax Filing", "Save 20%"],
-      amount: 499,
+      features: [
+        "4-Day Access",
+        "Up to 1000 entries/month",
+        "GST Return",
+        "TDS Return",
+        " Income Tax Return without Audit",
+        "1 Bookkeeping Officers (On site) ",
+        "1 Accountant",
+        "Technical Team",
+        "Technical Team Support "
+      ],
+      link: "/checkout?plan=monthly",
     },
     {
       title: "Yearly Plan",
-      price: "₹4999",
+      price: "₹60,000",
       duration: "Per Year",
       features: [
-        "365-Day Access",
-        "Dedicated Compliance Manager",
-        "ROC + GST + Tax Filing",
-        "Save 60%",
+        "48-Day Access",
+        "Up to 18,000 entries/year",
+        "GST Return",
+        "TDS Return",
+        " Income Tax Return without Audit",
+        "1 Bookkeeping Officers (On site) ",
+        "1 Accountant",
+        "Technical Team",
+        "Technical Team Support "
       ],
-      amount: 4999,
+      link: "/checkout?plan=yearly",
     },
   ];
 
-  const openModal = (plan) => {
-    setSelectedPlan(plan);
-    setModalOpen(true);
-  };
-
-  const handlePayment = () => {
-    if (!userName || !userEmail) return alert("Please enter your name and email.");
-    handleRazorpayPayment(selectedPlan.title, selectedPlan.amount, userName, userEmail);
-    setModalOpen(false);
-    setUserName("");
-    setUserEmail("");
-  };
-
   return (
-    <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center">
-      <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block">
-        Our Plans
-      </h1>
+    <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center ">
+      <div>
+        <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ">
+          Our Plans
+        </h1>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
         {plans.map((plan) => (
@@ -69,58 +75,58 @@ export default function Plans() {
               </h3>
               <p className="text-3xl font-bold text-black mb-1">{plan.price}</p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 font-medium">
+
+              <ul className="list-none list-inside space-y-4 text-gray-700 font-medium text-lg">
                 {plan.features.map((feature, i) => (
-                  <li key={i}>✅ {feature}</li>
+                  <li key={i} className="flex items-center">
+                    <span
+                      className="w-5 h-5 flex justify-center items-center bg-green-500 text-white rounded-sm mr-3"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </span>
+                    {feature}
+                  </li>
                 ))}
               </ul>
             </div>
+
             <button
-              onClick={() => openModal(plan)}
+              onClick={() => router.push(plan.link)}
               className="mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition"
             >
               Choose Plan
             </button>
           </div>
         ))}
+        
       </div>
+      <div className="text-left py-10">
+  <p className="text-2xl font-semibold">
+    Note -
+  </p>
+  <ul className="list-decimal pl-6 text-xl space-y-2">
+    <li>
+      Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
+    </li>
+    <li>
+      The prices mentioned are subject to change. Please refer to our latest pricing details.
+    </li>
+  </ul>
+</div>
 
-      {/* Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg w-full max-w-md text-left">
-            <h2 className="text-xl font-semibold mb-4">Enter Your Details</h2>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-2 mb-3 border rounded"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-2 mb-4 border rounded"
-              value={userEmail}
-              onChange={(e) => setUserEmail(e.target.value)}
-            />
-            <div className="flex justify-end space-x-2">
-              <button
-                className="bg-gray-300 text-black px-4 py-2 rounded"
-                onClick={() => setModalOpen(false)}
-              >
-                Cancel
-              </button>
-              <button
-                className="bg-[#E51D25] text-white px-4 py-2 rounded"
-                onClick={handlePayment}
-              >
-                Proceed to Pay
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
-  );
+  );
 }
