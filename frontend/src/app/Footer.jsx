@@ -4,7 +4,8 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f5f4f4] mx-auto px-5 sm:px-20 py-16 " id="contact">
+    <>
+      <footer className="bg-[#f5f4f4] mx-auto px-5 sm:px-20 py-16 " id="contact">
       <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 sm:gap-16 gap-10">
         {/* About YouTax */}
         <div>
@@ -71,5 +72,14 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+
+    <div className="bg-[#1A474A] px-16 py-3 mx-auto">
+  <p className="text-center text-white text-sm">
+    &copy; {new Date().getFullYear()} | Design & Developed By <a href="https://vm3techsolution.com" target="_blank" className="text-red-500">VM3 TechSolutions LLP</a>
+  </p>
+</div>
+
+    </>
+    
   );
 }
