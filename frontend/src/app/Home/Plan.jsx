@@ -28,7 +28,6 @@ export default function Plans() {
         "Up to 1000 entries/month",
         "GST Return",
         "TDS Return",
-        "Income Tax Return without Audit",
         "1 Bookkeeping Officers (On site)",
         "1 Accountant",
         "Technical Team",
