@@ -1,17 +1,9 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import axios from "axios";
+'use client';
+import { useRouter } from 'next/navigation';
+import axios from 'axios';
 
 export default function Plans() {
   const router = useRouter();
-  const [showModal, setShowModal] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
 
   const plans = [
     {
@@ -24,7 +16,7 @@ export default function Plans() {
         "1 Bookkeeping Officers (On site)",
         "1 Accountant",
         "Technical Team",
-        "Technical Team Support",
+        "Technical Team Support"
       ],
     },
     {
@@ -39,7 +31,7 @@ export default function Plans() {
         "1 Bookkeeping Officers (On site)",
         "1 Accountant",
         "Technical Team",
-        "Technical Team Support",
+        "Technical Team Support"
       ],
     },
     {
@@ -55,54 +47,39 @@ export default function Plans() {
         "1 Bookkeeping Officers (On site)",
         "1 Accountant",
         "Technical Team",
-        "Technical Team Support",
+        "Technical Team Support"
       ],
     },
   ];
 
   const loadRazorpay = () => {
     return new Promise((resolve) => {
-      const script = document.createElement("script");
-      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      const script = document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
       script.onload = () => resolve(true);
       script.onerror = () => resolve(false);
       document.body.appendChild(script);
     });
   };
 
-  const handlePaymentSubmit = async () => {
-    setShowModal(false);
+  const handlePayment = async (plan) => {
     const loaded = await loadRazorpay();
     if (!loaded) {
-      alert("Razorpay SDK failed to load.");
+      alert('Razorpay SDK failed to load.');
       return;
     }
 
     try {
-        await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/plan/submit-plan`,
-        {
-          ...formData,
-          plan: selectedPlan.title,
-          price: selectedPlan.price,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/payment/create-order`,
-        { amount: selectedPlan.price },
-        { headers: { "Content-Type": "application/json" } }
+        { amount: plan.price },
+        { headers: { 'Content-Type': 'application/json' } }
       );
 
       const data = res.data;
 
       if (!data?.order) {
-        alert("Failed to create order");
+        alert('Failed to create order');
         return;
       }
 
@@ -110,28 +87,28 @@ export default function Plans() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: data.order.amount,
         currency: data.order.currency,
-        name: "Youtax",
-        description: selectedPlan.title,
+        name: 'Youtax',
+        description: plan.title,
         order_id: data.order.id,
         handler: function (response) {
-          alert("Payment successful!");
+          alert('Payment successful!');
           console.log(response);
         },
         prefill: {
-          name: formData.name,
-          email: formData.email,
-          contact: formData.phone,
-        },
+    name: '',
+    email: '',
+    contact: '',
+  },
         theme: {
-          color: "#E51D25",
+          color: '#E51D25',
         },
       };
 
       const rzp = new window.Razorpay(options);
       rzp.open();
     } catch (error) {
-      console.error("Payment initiation error:", error);
-      alert("Something went wrong during payment.");
+      console.error('Payment initiation error:', error);
+      alert('Something went wrong during payment.');
     }
   };
 
@@ -153,9 +130,7 @@ export default function Plans() {
               <h3 className="text-2xl font-semibold text-[#E51D25] mb-2">
                 {plan.title}
               </h3>
-              <p className="text-3xl font-bold text-black mb-1">
-                ₹{plan.price}
-              </p>
+              <p className="text-3xl font-bold text-black mb-1">₹{plan.price}</p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
 
               <ul className="list-none list-inside space-y-4 text-gray-700 font-medium text-lg">
@@ -184,10 +159,7 @@ export default function Plans() {
             </div>
 
             <button
-              onClick={() => {
-                setSelectedPlan(plan);
-                setShowModal(true);
-              }}
+              onClick={() => handlePayment(plan)}
               className="mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition"
             >
               Choose Plan
@@ -200,80 +172,13 @@ export default function Plans() {
         <p className="text-2xl font-semibold">Note -</p>
         <ul className="list-decimal pl-6 text-xl space-y-2">
           <li>
-            Entries include Sales Bills, Purchase Bills, and Bank Account
-            Statements.
+            Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
           </li>
           <li>
-            The prices mentioned are subject to change. Please refer to our
-            latest pricing details.
+            The prices mentioned are subject to change. Please refer to our latest pricing details.
           </li>
         </ul>
       </div>
-
-      {showModal && (
-        <div className="fixed inset-0 bg-[rgba(0,0,0,0.8)] flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-lg w-full max-w-md shadow-xl relative">
-            <h2 className="text-xl font-semibold mb-4">Enter Your Details</h2>
-
-            {selectedPlan && (
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Selected Plan
-                </label>
-                <input
-                  type="text"
-                  value={`${selectedPlan.title} - ₹${selectedPlan.price}`}
-                  readOnly
-                  className="w-full border px-3 py-2 rounded bg-gray-100 text-gray-800"
-                />
-              </div>
-            )}
-
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border px-3 py-2 mb-3 rounded"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border px-3 py-2 mb-3 rounded"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-            />
-            <input
-              type="tel"
-              placeholder="Phone"
-              className="w-full border px-3 py-2 mb-3 rounded"
-              value={formData.phone}
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
-            />
-
-            <div className="flex justify-between mt-4">
-              <button
-                onClick={() => setShowModal(false)}
-                className="px-4 py-2 rounded bg-gray-300 text-black"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handlePaymentSubmit}
-                className="px-4 py-2 rounded bg-[#E51D25] text-white"
-              >
-                Proceed to Pay
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
