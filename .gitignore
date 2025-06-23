@@ -41,3 +41,6 @@ backend/.env
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# GSheet 
+backend/credentials.json
