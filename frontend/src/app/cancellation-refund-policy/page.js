@@ -1,47 +1,53 @@
-import React from 'react';
+import React from "react";
 
 const CancellationRefundPolicy = () => {
   return (
-    <div className='relative mx-6 my-12 md:m-24'>
-      <h2 className='text-3xl font-bold mb-6'>Cancellation &amp; Refund Policy</h2>
-      <p><strong>Last Updated:</strong> 24/06/2025 </p>
-
-      <h3>1. Cancellation Requests</h3>
+    <div className="relative mx-6 my-12 md:m-24">
+      <h2 className="text-3xl font-bold mb-6">
+        Cancellation &amp; Refund Policy
+      </h2>
       <p>
-        All cancellation requests must be sent via email to <a href="mailto:support@youbuz.in">support@youbuz.in</a>
-        {' '}or by calling <a href="tel:+YOURPHONE">[contact number]</a>. Please include your name, subscription type
-        (daily/monthly/yearly), and reason for cancellation.
+        <strong>Last Updated:</strong> 24/06/2025{" "}
+      </p>
+      <p>
+        Thank you for choosing Youtax India Consulting Pvt. Ltd. We value your
+        trust and strive to provide the best possible service.
       </p>
 
-      <h3>2. Effective Date &amp; Access</h3>
-      <p>
-        Cancellation takes effect immediately upon receipt. You will retain access until the end of your current paid
-        period, and future charges will cease thereafter.
-      </p>
-
-      <h3>3. Refunds</h3>
+      <h3 className="font-bold">1. Eligibility for Refund</h3>
+      <p>Refunds will be considered only in the following cases:</p>
       <ul>
-        <li><strong>All sales are final:</strong> No refunds once a payment is made.</li>
-        <li>No partial or pro‑rated refunds, except where required by law or if services aren’t delivered as promised.</li>
-        <li>If we fail to deliver the agreed service, contact us within 7 days for review and possible remedy or refund.</li>
+        <li>• Duplicate payment made by the customer.</li>
+        <li>• Payment made for a service/product that was not delivered.</li>
+        <li>• Cancellation of service before the agreed-upon start date. </li>
       </ul>
 
-      <h3>4. Processing Time</h3>
+      <h3 className="font-bold">2. Non-Refundable Services</h3>
       <p>
-        Approved refunds, if any, are processed to the original payment method within 7–15 business days, depending on your bank.
+        Once the service has commenced or the product has been delivered, no
+        refunds will be processed unless explicitly stated otherwise.
       </p>
 
-      <h3>5. Dispute Resolution</h3>
+      <h3 className="font-bold">3. Refund Process</h3>
       <p>
-        If a refund request is denied, we will clearly explain the reason. We encourage resolving any disagreements
-        amicably before pursuing legal options.
+        If your request meets the refund eligibility criteria, please email us
+        at info@youtax.in with your payment details and reason for the refund
+        request.
+      </p>
+      <p>
+        Once approved, refunds will be processed within 7-10 business days to
+        the original payment method.
       </p>
 
-      <h3>6. Policy Updates</h3>
+      <h3 className="font-bold">4. Contact Us</h3>
       <p>
-        We may update this policy at any time. The revised version will be posted here with a new “Last Updated” date.
+        If you have any questions about our refund policy, feel free to contact
+        us at:
       </p>
-
+        <ul>
+            <li>📧 info@youtax.in</li>
+            <li>📞 +(91) 9610456254</li>
+        </ul>
       
     </div>
   );
