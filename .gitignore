@@ -43,4 +43,4 @@ backend/.env
 next-env.d.ts
 
 # GSheet 
-backend/credentials.json
+backend/youbuzcontact.json

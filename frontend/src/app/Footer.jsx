@@ -46,9 +46,9 @@ export default function Footer() {
         <div>
           <h3 className="text-2xl font-semibold text-[#E51D25] mb-3">Legal</h3>
           <ul className="text-lg font-medium space-y-2">
-            <a href="/terms-and-conditions"><li>• Terms & Conditions</li></a>
-            <a href="/privacy-policy"><li>• Privacy Policy</li></a>
-            <a href="/cancellation-refund-policy"><li>• Cancellation/Refund Policy</li></a>
+            <li><a href="/terms-and-conditions">• Terms & Conditions</a></li>
+            <li><a href="/privacy-policy">• Privacy Policy</a></li>
+            <li><a href="/cancellation-refund-policy">• Cancellation/Refund Policy</a></li>
           </ul>
         </div>
 
