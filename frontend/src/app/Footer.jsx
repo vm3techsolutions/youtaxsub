@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[#f5f4f4] mx-auto px-5 sm:px-20 py-16 " id="contact">
-      <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 sm:gap-16 gap-10">
+      <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 sm:gap-16 gap-10">
         {/* About YouTax */}
         <div>
           <h3 className="text-2xl font-semibold text-[#E51D25] mb-3">About YouTax</h3>
@@ -40,6 +40,15 @@ export default function Footer() {
           <ul className="text-lg font-medium space-y-2">
             <li>• Pune</li>
             <li>• Baramati</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-semibold text-[#E51D25] mb-3">Legal</h3>
+          <ul className="text-lg font-medium space-y-2">
+            <a href="/terms-and-conditions"><li>• Terms & Conditions</li></a>
+            <a href="/privacy-policy"><li>• Privacy Policy</li></a>
+            <a href="/cancellation-refund-policy"><li>• Cancellation/Refund Policy</li></a>
           </ul>
         </div>
 
