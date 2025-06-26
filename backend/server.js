@@ -13,10 +13,10 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ Mount the route
-app.use('/api/payment', paymentRoutes);
+app.use('/payment', paymentRoutes);
 console.log('✅ Payment routes mounted');
 
-app.use('/api/plan', planRoutes); // Mount route
+app.use('/plan', planRoutes); // Mount route
 
 
 const PORT = process.env.PORT || 5000;

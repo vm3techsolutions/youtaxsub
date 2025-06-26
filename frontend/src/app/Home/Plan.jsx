@@ -80,7 +80,7 @@ export default function Plans() {
 
     try {
         await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/plan/submit-plan`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/plan/submit-plan`,
         {
           ...formData,
           plan: selectedPlan.title,
@@ -94,7 +94,7 @@ export default function Plans() {
       );
 
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/payment/create-order`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/payment/create-order`,
         { amount: selectedPlan.price },
         { headers: { "Content-Type": "application/json" } }
       );
