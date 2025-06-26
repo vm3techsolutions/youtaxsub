@@ -12,6 +12,11 @@ export default function Plans() {
     email: "",
     phone: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
 
   const plans = [
     {
@@ -70,7 +75,41 @@ export default function Plans() {
     });
   };
 
+  const validateForm = () => {
+    const newErrors = { name: "", email: "", phone: "" };
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+    newErrors.name = "Name is required.";
+    isValid = false;
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
+    newErrors.name = "Name must contain only letters and spaces.";
+    isValid = false;
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Invalid email format.";
+      isValid = false;
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+      isValid = false;
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handlePaymentSubmit = async () => {
+    if (!validateForm()) return;
+
     setShowModal(false);
     const loaded = await loadRazorpay();
     if (!loaded) {
@@ -79,18 +118,14 @@ export default function Plans() {
     }
 
     try {
-        await axios.post(
+      await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/plan/submit-plan`,
         {
           ...formData,
           plan: selectedPlan.title,
           price: selectedPlan.price,
         },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        { headers: { "Content-Type": "application/json" } }
       );
 
       const res = await axios.post(
@@ -100,7 +135,6 @@ export default function Plans() {
       );
 
       const data = res.data;
-
       if (!data?.order) {
         alert("Failed to create order");
         return;
@@ -114,7 +148,7 @@ export default function Plans() {
         description: selectedPlan.title,
         order_id: data.order.id,
         handler: function (response) {
-          alert("Payment successful!");
+          alert("✅ Payment successful!");
           console.log(response);
         },
         prefill: {
@@ -131,7 +165,7 @@ export default function Plans() {
       rzp.open();
     } catch (error) {
       console.error("Payment initiation error:", error);
-      alert("Something went wrong during payment.");
+      alert("❌ Something went wrong during payment.");
     }
   };
 
@@ -162,20 +196,7 @@ export default function Plans() {
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
                     <span className="w-5 h-5 flex justify-center items-center bg-green-500 text-white rounded-sm mr-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="w-4 h-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      ✓
                     </span>
                     {feature}
                   </li>
@@ -200,12 +221,10 @@ export default function Plans() {
         <p className="text-2xl font-semibold">Note -</p>
         <ul className="list-decimal pl-6 text-xl space-y-2">
           <li>
-            Entries include Sales Bills, Purchase Bills, and Bank Account
-            Statements.
+            Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
           </li>
           <li>
-            The prices mentioned are subject to change. Please refer to our
-            latest pricing details.
+            The prices mentioned are subject to change. Please refer to our latest pricing details.
           </li>
         </ul>
       </div>
@@ -232,30 +251,29 @@ export default function Plans() {
             <input
               type="text"
               placeholder="Name"
-              className="w-full border px-3 py-2 mb-3 rounded"
+              className="w-full border px-3 py-2 mb-1 rounded"
               value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
+            {errors.name && <p className="text-sm text-red-500 mb-2">{errors.name}</p>}
+
             <input
               type="email"
               placeholder="Email"
-              className="w-full border px-3 py-2 mb-3 rounded"
+              className="w-full border px-3 py-2 mb-1 rounded"
               value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
+            {errors.email && <p className="text-sm text-red-500 mb-2">{errors.email}</p>}
+
             <input
               type="tel"
               placeholder="Phone"
-              className="w-full border px-3 py-2 mb-3 rounded"
+              className="w-full border px-3 py-2 mb-1 rounded"
               value={formData.phone}
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             />
+            {errors.phone && <p className="text-sm text-red-500 mb-2">{errors.phone}</p>}
 
             <div className="flex justify-between mt-4">
               <button

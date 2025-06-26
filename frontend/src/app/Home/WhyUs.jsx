@@ -40,7 +40,7 @@ export default function ServicesSection() {
   <div className="flex flex-col items-center text-center">
     {/* Heading */}
     <span className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-3">
-      HOW It Works
+      How It Works
     </span>
     
     <span className="bg-black text-white w-10 h-10 flex items-center justify-center rounded-full text-sm sm:text-base my-5">

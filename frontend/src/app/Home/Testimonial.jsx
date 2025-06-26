@@ -38,9 +38,14 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <div className="mx-auto px-5 sm:px-20 py-16 text-center relative">
+    <div className="mx-auto bg-[#f5f4f4] px-5 sm:px-20 py-16 text-center relative">
      
-
+{/* Heading */}
+      <div>
+        <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ml-6">
+          Stories of Satisfaction
+        </h1>
+      </div>
       <div className="p-8 relative">
         {/* Arrows */}
         <button
