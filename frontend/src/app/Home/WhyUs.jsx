@@ -1,7 +1,7 @@
 "use client";
 export default function ServicesSection() {
   return (
-    <section className="mx-auto px-5 sm:px-20 py-16 text-center">
+    <section className="mx-auto bg-[#f5f4f4] px-5 sm:px-20 py-16 text-center">
       <div>
   {/* Service 2 */}
   <div className="flex flex-col md:flex-row gap-8 text-left">
@@ -36,7 +36,7 @@ export default function ServicesSection() {
     </div>
 
     {/* Image Section - Reduced Width & Height */}
-    <div className="md:w-[35%] mt-2 flex justify-center items-start">
+    <div className="md:w-[35%] p-5 sm:p-6 flex justify-center items-start">
   <div className="flex flex-col items-center text-center">
     {/* Heading */}
     <span className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-3">
