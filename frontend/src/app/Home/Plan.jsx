@@ -21,7 +21,7 @@ export default function Plans() {
   const plans = [
     {
       title: "1-Day Visit",
-      price: 1,
+      price: 2000,
       duration: "Per Day",
       features: [
         "1-Day Access",
