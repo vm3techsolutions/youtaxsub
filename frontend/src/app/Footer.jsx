@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/YOUTAXINDIACPL/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-black p-2 hover:text-[#E51D25] transition-all"
@@ -33,7 +34,7 @@ export default function Footer() {
                 <FaFacebookF className="text-white text-lg" />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/youtaxindia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-black p-2 hover:text-[#E51D25] transition-all"
@@ -41,7 +42,7 @@ export default function Footer() {
                 <FaInstagram className="text-white text-lg" />
               </a>
               <a
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/channel/UCrWVJcAlVVU1Gdzp_DmpuUQ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-black p-2 hover:text-[#E51D25] transition-all"
@@ -49,12 +50,20 @@ export default function Footer() {
                 <FaYoutube className="text-white text-lg" />
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/youtax-india-consulting-pvt-ltd/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-black p-2 hover:text-[#E51D25] transition-all"
               >
                 <FaLinkedinIn className="text-white text-lg" />
+              </a>
+              <a
+                href="https://x.com/YoutaxIndia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-black p-2 hover:text-[#E51D25] transition-all"
+              >
+                <FaXTwitter className="text-white text-lg" />
               </a>
             </div>
           </div>
