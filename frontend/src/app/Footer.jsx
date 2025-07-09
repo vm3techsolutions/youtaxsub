@@ -133,7 +133,7 @@ export default function Footer() {
           target="_blank"
           className="text-red-500 underline hover:text-white"
         >
-          VM3 TechSolutions LLP
+          VM3 Tech Solutions LLP
         </a>
       </div>
     </>
