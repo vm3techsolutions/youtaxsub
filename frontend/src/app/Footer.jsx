@@ -131,7 +131,7 @@ export default function Footer() {
         <a
           href="https://vm3techsolution.com"
           target="_blank"
-          className="text-red-500 underline hover:text-white"
+          className="text-red-500 hover:text-white"
         >
           VM3 Tech Solutions LLP
         </a>
