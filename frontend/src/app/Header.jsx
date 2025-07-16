@@ -51,22 +51,34 @@ export default function Header() {
 
       {/* Mobile Menu - Visible on Mobile */}
       {isMenuOpen && (
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-black w-full rounded-b-2xl shadow-lg md:hidden">
-          <nav className="flex flex-col items-center py-4 text-gray-800 font-medium space-y-4 mt-8">
-            <Link href="/" className="py-2">HOME</Link>
-            <Link href="/#about" className="py-2">ABOUT</Link>
-            <Link href="/#contact" className="py-2">CONTACT</Link>
+  <div className="fixed inset-0 z-50 bg-blend-multiply bg-opacity-70 md:hidden">
+    <div className="fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white text-black shadow-lg transform transition-transform duration-300 ease-in-out translate-x-0">
+      {/* Close button */}
+      <button
+        className="absolute top-4 right-4 text-black text-2xl font-bold"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        ×
+      </button>
 
-            {/* Button */}
-            <Link
-              href="#contact"
-              className="bg-[#E51D25] hover:bg-red-700 text-white px-5 py-2 rounded-full transition font-semibold text-sm mt-4"
-            >
-              Talk To Us <span className="ml-1">»</span>
-            </Link>
-          </nav>
-        </div>
-      )}
+      {/* Navigation */}
+      <nav className="flex flex-col items-start px-6 py-10 space-y-6 text-lg font-medium">
+        <Link href="/" onClick={() => setIsMenuOpen(false)}>HOME</Link>
+        <Link href="/#about" onClick={() => setIsMenuOpen(false)}>ABOUT</Link>
+        <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link>
+
+        <Link
+          href="#contact"
+          onClick={() => setIsMenuOpen(false)}
+          className="bg-[#E51D25] hover:bg-red-700 text-white px-5 py-2 rounded-full transition font-semibold text-sm mt-4"
+        >
+          Talk To Us <span className="ml-1">»</span>
+        </Link>
+      </nav>
+    </div>
+  </div>
+)}
+
     </header>
   );
 }
