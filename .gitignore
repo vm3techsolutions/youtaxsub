@@ -44,3 +44,8 @@ next-env.d.ts
 
 # GSheet 
 backend/youbuzcontact.json
+
+# sitemap
+frontend/public/sitemap.xml
+frontend/public/sitemap-0.xml
+frontend/public/robots.txt
