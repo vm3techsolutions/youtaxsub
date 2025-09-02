@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "export",   // ✅ this replaces next export
+  // ❌ remove output: "export"
   images: {
-    unoptimized: true, // required for static export
+    domains: [], // add any image domains you use (if needed)
   },
 };
 
