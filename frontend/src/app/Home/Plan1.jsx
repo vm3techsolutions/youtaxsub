@@ -80,13 +80,13 @@ export default function Plans() {
     let isValid = true;
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required.";
-      isValid = false;
+    newErrors.name = "Name is required.";
+    isValid = false;
     } else if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
-      newErrors.name = "Name must contain only letters and spaces.";
-      isValid = false;
+    newErrors.name = "Name must contain only letters and spaces.";
+    isValid = false;
     }
-
+    
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
       isValid = false;
@@ -111,7 +111,6 @@ export default function Plans() {
     if (!validateForm()) return;
 
     setShowModal(false);
-
     const loaded = await loadRazorpay();
     if (!loaded) {
       alert("Razorpay SDK failed to load.");
@@ -119,22 +118,23 @@ export default function Plans() {
     }
 
     try {
-      const apiBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-
-      // Send all user and plan details to your Lambda via API Gateway
-      const res = await axios.post(
-        `${apiBaseUrl}/create-order`,
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/plan/submit-plan`,
         {
           ...formData,
           plan: selectedPlan.title,
           price: selectedPlan.price,
-          amount: selectedPlan.price,
         },
         { headers: { "Content-Type": "application/json" } }
       );
 
-      const data = res.data;
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/payment/create-order`,
+        { amount: selectedPlan.price },
+        { headers: { "Content-Type": "application/json" } }
+      );
 
+      const data = res.data;
       if (!data?.order) {
         alert("Failed to create order");
         return;
@@ -149,7 +149,7 @@ export default function Plans() {
         order_id: data.order.id,
         handler: function (response) {
           alert("✅ Payment successful!");
-          console.log("Payment success response:", response);
+          console.log(response);
         },
         prefill: {
           name: formData.name,
@@ -176,6 +176,7 @@ export default function Plans() {
           Our Plans
         </h1>
       </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
         {plans.map((plan, index) => (
           <div
@@ -190,6 +191,7 @@ export default function Plans() {
                 ₹{plan.price}
               </p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
+
               <ul className="list-none list-inside space-y-4 text-gray-700 font-medium text-lg">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
@@ -201,6 +203,7 @@ export default function Plans() {
                 ))}
               </ul>
             </div>
+
             <button
               onClick={() => {
                 setSelectedPlan(plan);
@@ -213,6 +216,7 @@ export default function Plans() {
           </div>
         ))}
       </div>
+
       <div className="text-left py-10">
         <p className="text-2xl font-semibold">Note -</p>
         <ul className="list-decimal pl-6 text-xl space-y-2">
@@ -224,10 +228,12 @@ export default function Plans() {
           </li>
         </ul>
       </div>
+
       {showModal && (
         <div className="fixed inset-0 bg-[rgba(0,0,0,0.8)] flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-lg w-full max-w-md shadow-xl relative">
             <h2 className="text-xl font-semibold mb-4">Enter Your Details</h2>
+
             {selectedPlan && (
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -241,6 +247,7 @@ export default function Plans() {
                 />
               </div>
             )}
+
             <input
               type="text"
               placeholder="Name"
@@ -249,6 +256,7 @@ export default function Plans() {
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
             {errors.name && <p className="text-sm text-red-500 mb-2">{errors.name}</p>}
+
             <input
               type="email"
               placeholder="Email"
@@ -257,6 +265,7 @@ export default function Plans() {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
             {errors.email && <p className="text-sm text-red-500 mb-2">{errors.email}</p>}
+
             <input
               type="tel"
               placeholder="Phone"
@@ -265,6 +274,7 @@ export default function Plans() {
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             />
             {errors.phone && <p className="text-sm text-red-500 mb-2">{errors.phone}</p>}
+
             <div className="flex justify-between mt-4">
               <button
                 onClick={() => setShowModal(false)}
