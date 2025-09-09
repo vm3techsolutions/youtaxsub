@@ -44,21 +44,21 @@ export default function TestimonialSlider() {
     <div className="mx-auto bg-[#f5f4f4] px-5 sm:px-20 py-16 text-center relative">
       {/* Heading */}
       <div>
-        <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ml-6">
+        <h1 className="bg-[#003366] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block ml-6">
           Stories of Satisfaction
         </h1>
       </div>
       <div className="p-8 relative">
         {/* Arrows */}
         <button
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 text-lg py-1 px-1 text-white hover:text-[#E51D25]  bg-black rounded-full "
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 text-lg py-1 px-1 text-white hover:text-[#fff]  bg-black rounded-full "
           onClick={prevSlide}
         >
           <FaChevronLeft />
         </button>
 
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 text-lg py-1 px-1 text-white hover:text-[#E51D25]  bg-black rounded-full "
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 text-lg py-1 px-1 text-white hover:text-[#fff]  bg-black rounded-full "
           onClick={nextSlide}
         >
           <FaChevronRight />
@@ -80,7 +80,7 @@ export default function TestimonialSlider() {
             {testimonials[current].position}
           </p>
           {/* Description Section */}
-          <div className="text-gray-700 max-w-xl text-sm sm:text-base min-h-[72px] sm:min-h-[64px] flex items-center justify-center transition-all duration-300">
+          <div className="text-[#231f20] max-w-xl text-sm sm:text-base min-h-[72px] sm:min-h-[64px] flex items-center justify-center transition-all duration-300">
             <p
               key={current}
               className="transition-opacity duration-300 ease-in-out"
@@ -88,7 +88,7 @@ export default function TestimonialSlider() {
               {testimonials[current].description}
             </p>
           </div>{" "}
-          <div className="flex justify-center gap-2 mt-2 text-[#e51d25] text-lg">
+          <div className="flex justify-center gap-2 mt-2 text-[#003366] text-lg">
             {Array(5)
               .fill()
               .map((_, i) => (

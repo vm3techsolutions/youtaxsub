@@ -11,26 +11,26 @@ export default function ServicesSection() {
           <div className=" p-5 sm:p-6 ">
             {/* Heading */}
             <div className="mb-6 text-center sm:text-start">
-              <span className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold">
+              <span className="bg-[#003366] text-white px-4 py-1 rounded-lg text-xl font-semibold">
                 About Company
               </span>
             </div>
 
             {/* Subtitle */}
-            <h2 className="text-lg sm:text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-medium text-gray-700 mb-12 ">
+            <h2 className="text-lg sm:text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-medium text-[#231f20] mb-12 ">
               Simplifying Your Finances, <br />
-              <span className="text-[#E51D25]">Empowering Your Growth!</span>
+              <span className="text-[#003366]">Empowering Your Growth!</span>
             </h2>
 
             <div className="flex space-x-10 ">
               <div>
-                <h1 className="text-8xl font-bold text-[#E51D25]">8+</h1>
+                <h1 className="text-8xl font-bold text-[#003366]">8+</h1>
               </div>
 
               <div className="border-2 border-[#2B2A28] py-2 px-4 rounded-lg">
-                <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-gray-700  ">
+                <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-[#231f20]  ">
                   Year Of <br />
-                  <span className="text-[#E51D25]">Expertise</span>
+                  <span className="text-[#003366]">Expertise</span>
                 </h2>
               </div>
             </div>
@@ -56,22 +56,22 @@ export default function ServicesSection() {
     
     {/* Text Section - Increased Width */}
     <div className="md:w-[65%] p-5 sm:p-6 ">
-      <p className="text-md ">
+      <p className="text-md text-[#231f20]">
         The team at the firm has dedicated and experienced professionals and associates like Chartered Accountants, Company Secretary and Consultants to provide end to end services to your business.
         Founded in 2018 by Mr. Nandkishor And Mrs. Sonali Devadnye, YOUTAX INDIA CONSULTING PRIVATE LIMITED has come a long way from its beginnings in Hadapsar Pune. When they first started out, their passion for providing in time delivery of quality services in the field of TAX so that YOUTAX INDIA CONSULTING PRIVATE LIMITED can offer you quality services for your business for future growth. We now serve customers all over Maharashtra.
       </p>
 
-      <div className="flex flex-wrap gap-16 items-center text-lg font-medium text-gray-800 mt-20">
+      <div className="flex flex-wrap gap-16 items-center text-lg font-medium text-[#231f20] mt-20">
         <div className="flex items-center gap-2">
-          <FaCheck className="text-white bg-black rounded-full py-1 px-1" />
+          <FaCheck className="text-white white bg-[#003366] rounded-full py-1 px-1" />
           <span>Consistency</span>
         </div>
         <div className="flex items-center gap-2">
-          <FaCheck className="text-white bg-black rounded-full py-1 px-1" />
+          <FaCheck className="text-white bg-[#003366]  rounded-full py-1 px-1" />
           <span>Strategy</span>
         </div>
         <div className="flex items-center gap-2">
-          <FaCheck className="text-white bg-black rounded-full py-1 px-1" />
+          <FaCheck className="text-white bg-[#003366]  rounded-full py-1 px-1" />
           <span>Investment</span>
         </div>
       </div>

@@ -8,14 +8,14 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative bg-[#1a474a] h-16">
+    <header className="relative bg-[#003366] h-16">
       {/* White Bar Positioned Absolutely */}
       <div className="absolute top-2/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-6xl w-full flex items-center justify-between bg-white rounded-2xl px-6 py-2 shadow-md z-10">
         {/* Logo */}
         <div className="flex items-center space-x-2">
         <Link href="/">
           <Image
-            src="/assets/YouTaxLogo.png"
+            src="/assets/Logo.jpg"
             alt="YouTax Logo"
             width={120}
             height={50}
@@ -24,7 +24,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu - Hidden on Mobile */}
-        <nav className="hidden md:flex items-center space-x-10 text-gray-800 font-medium">
+        <nav className="hidden md:flex items-center space-x-10 text-[#231f20] font-medium">
           <Link href="/">HOME</Link>
           <Link href="#about">ABOUT</Link>
           <Link href="#contact">CONTACT</Link>
@@ -32,7 +32,7 @@ export default function Header() {
           {/* Button */}
           <Link
             href="#contact"
-            className="bg-[#E51D25] hover:bg-red-700 text-white px-5 py-2 rounded-xl transition font-semibold text-sm"
+            className="bg-[#ffbf00] hover:bg-[#003366] text-white px-5 py-2 rounded-xl transition font-semibold text-sm"
           >
             Talk To Us <span className="ml-1">»</span>
           </Link>

@@ -7,7 +7,7 @@ export default function ServicesSection() {
       
       {/* Heading */}
       <div className="mb-6">
-        <span className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold">
+        <span className="bg-[#003366] text-white px-4 py-1 rounded-lg text-xl font-semibold">
           What We Do
         </span>
       </div>
@@ -21,11 +21,11 @@ export default function ServicesSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 text-left">
         
         {/* Card 1 */}
-        <div className="bg-[#E51D25] rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div className="bg-[#003366] rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
             <div className="mb-4">
               <div className="flex items-center space-x-3 sm:space-x-4">
-                <span className="bg-white text-[#E51D25] w-10 h-10 flex items-center justify-center rounded-full font-bold border-2 text-sm sm:text-base">
+                <span className="bg-white text-[#003366] w-10 h-10 flex items-center justify-center rounded-full font-bold border-2 text-sm sm:text-base">
                   01
                 </span>
                 <h3 className="text-white font-semibold text-lg sm:text-xl md:text-2xl">
@@ -44,7 +44,7 @@ export default function ServicesSection() {
 
             <div className="pt-20">
         <Link href="/#Plans">
-            <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
+            <button className="mt-auto bg-[#ffbf00] text-[#003366] font-semibold py-2 px-4 rounded-lg hover:bg-[#fff] transition w-fit border-2">
               Book Now
             </button>
           </Link>
@@ -54,11 +54,11 @@ export default function ServicesSection() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[#E51D25] rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div className="bg-[#003366] rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
             <div className="mb-4">
               <div className="flex items-center space-x-3 sm:space-x-4">
-                <span className="bg-white text-[#E51D25] w-10 h-10 flex items-center justify-center rounded-full font-bold text-sm sm:text-base">
+                <span className="bg-white text-[#003366] w-10 h-10 flex items-center justify-center rounded-full font-bold text-sm sm:text-base">
                   02
                 </span>
                 <h3 className="text-white font-semibold text-lg sm:text-xl md:text-2xl">
@@ -75,7 +75,7 @@ export default function ServicesSection() {
 
             <div className="pt-5">
         <Link href="https://forms.gle/66iTHgUTjt9x5pnw9">
-            <button className="mt-auto bg-white text-[#E51D25] font-semibold py-2 px-4 rounded-lg hover:bg-[#E51D25] hover:text-white transition w-fit border-2">
+            <button className="mt-auto bg-[#ffbf00] text-[#003366] font-semibold py-2 px-4 rounded-lg hover:bg-[#fff]  transition w-fit border-2">
               Enquiry Now
             </button>
           </Link>

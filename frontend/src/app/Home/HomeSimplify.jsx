@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="w-full md:w-[40%] sm:px-6 relative z-10">
         <h1 className="text-4xl md:text-8xl font-light leading-tight ">
           Simplify Your <br />
-          <span className="text-[#E51D25] font-bold">Needs in Minutes!</span>
+          <span className="text-[#003366] font-bold">Needs in Minutes!</span>
         </h1>
 
         <div className="mt-10">
@@ -32,7 +32,7 @@ export default function HeroSection() {
 
       {/* Right Column */}
       <div className="w-full md:w-[60%] sm:px-10 relative z-10">
-        <p className="text-gray-800 text-xl">
+        <p className="text-[#231f20] text-xl">
           
         Welcome to  <strong>YOUTAX INDIA CONSULTING PVT. LTD. </strong>.
           your number one source for all types of  <strong>taxation services.</strong>We're dedicated to giving you the best of service for the <strong>growth of your business, </strong>with a professional team.
