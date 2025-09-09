@@ -14,17 +14,17 @@ export default function Footer() {
       <footer className="bg-[#f5f4f4] mx-auto px-4 sm:px-10 md:px-20 pt-12 pb-10" id="contact">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* About YouTax */}
-          <div>
+          <div >
             <h3 className="text-2xl font-semibold text-[#003366] mb-3">
               About YouTax
             </h3>
-            <p className="text-base font-medium mb-2 text-[#231f20]">
+            <p className="text-base font-medium mb-4 text-[#231f20] ">
               Trusted End-To-End Business Consultant in Pune For Your Business Success.
             </p>
-            <p className="text-base font-medium mb-4 text-[#231f20]">
+            {/* <p className="text-base font-medium mb-4 text-[#231f20]">
               You Are a Call Away From Business Consultant and Right Solutions.
-            </p>
-            <div className="flex gap-3">
+            </p> */}
+            <div className="flex gap-3 ">
               <a
                 href="https://www.facebook.com/YOUTAXINDIACPL/"
                 target="_blank"

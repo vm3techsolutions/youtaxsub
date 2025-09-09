@@ -20,63 +20,50 @@ export default function Plans() {
 
   const plans = [
     {
-      title: "1-Day Visit",
+      title: "Essential (1 Day)",
       price: 2000,
       duration: "Per Day",
       features: [
         "1-Day Visit",
-        "Up to 250 entries/day",
-        // "1 Bookkeeping Officers (On site)",
-        // "1 Accountant",
-        
-        // "Technical Team Support",
-
-        "GST Return",
+      
+        "1 Bookkeeping Officers (On site)",
+        "1 Accountant",        
+        "Technical Team Support",
+         "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
-        "1 Bookkeeping Officers (On site)",
-        "1 Accountant",
-        
-        "Technical Team Support",
       ],
     },
     {
-      title: "Monthly Plan",
+      title: "Pro (Monthly)",
       price: 7000,
       duration: "Per Month",
       features: [
         "4-Day Visit",
-        "Up to 1000 entries/month",
-        // "GST Return",
-        // "TDS Return",
-        // "1 Bookkeeping Officers (On site)",
-        // "1 Accountant",
-        
-        // "Technical Team Support",
-
-        "GST Return",
+      
+       
+        "1 Bookkeeping Officers (On site)",
+        "1 Accountant",        
+        "Technical Team Support",
+         "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
-        "1 Bookkeeping Officers (On site)",
-        "1 Accountant",
-        
-        "Technical Team Support",
       ],
     },
     {
-      title: "Yearly Plan",
+      title: "Elite (Yearly)",
       price: 60000,
       duration: "Per Year",
       features: [
         "48-Day Visit",
-        "Up to 18,000 entries/year",
-        "GST Return",
+      
+       
+        "1 Bookkeeping Officers (On site)",
+        "1 Accountant",        
+        "Technical Team Support",
+         "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
-        "1 Bookkeeping Officers (On site)",
-        "1 Accountant",
-        
-        "Technical Team Support",
       ],
     },
   ];
@@ -206,16 +193,42 @@ export default function Plans() {
                 ₹{plan.price}
               </p>
               <p className="text-[#231f20] mb-4">{plan.duration}</p>
-              <ul className="list-none list-inside space-y-4 text-[#231f20] font-medium text-lg">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    <span className="w-5 h-5 flex justify-center items-center bg-green-500 text-white rounded-sm mr-3">
-                      ✓
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+           <ul className="list-none list-inside space-y-4 text-[#231f20] font-medium text-lg">
+  {plan.features.map((feature, i) => {
+    let isCross = false;
+
+    if (plan.title === "Essential (1 Day)" && i >= plan.features.length - 3) {
+      isCross = true;
+    } else if (plan.title === "Pro (Monthly)" && i === plan.features.length - 1) {
+      isCross = true;
+    }
+
+    return (
+      <li
+  key={i}
+  className={`flex items-center ${
+    isCross
+      ? "text-gray-400 hover:text-black"
+      : "text-[#231f20]"
+  }`}
+>
+  {isCross ? (
+    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-red-500 rounded-sm mr-3 font-bold">
+      ✕
+    </span>
+  ) : (
+    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-green-500 rounded-sm mr-3 font-bold">
+      ✓
+    </span>
+  )}
+  {feature}
+</li>
+
+    );
+  })}
+</ul>
+
+
             </div>
             <button
               onClick={() => {

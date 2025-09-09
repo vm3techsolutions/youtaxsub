@@ -29,7 +29,7 @@ export default function ServicesSection() {
                   01
                 </span>
                 <h3 className="text-white font-semibold text-lg sm:text-xl md:text-2xl">
-                  Hire An Accountant
+                  On-Site Accountant Service
                 </h3>
               </div>
               <div className="w-28 sm:w-40 md:w-64 h-[1px] bg-white mt-2 ml-14 sm:ml-12 md:ml-14" />

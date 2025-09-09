@@ -20,47 +20,50 @@ export default function Plans() {
 
   const plans = [
     {
-      title: "1-Day Visit",
+      title: "Essential (1 Day)",
       price: 2000,
       duration: "Per Day",
       features: [
-        "1-Day Access",
-        "Up to 250 entries/day",
+        "1-Day Visit",
+      
         "1 Bookkeeping Officers (On site)",
-        "1 Accountant",
-        "Technical Team",
+        "1 Accountant",        
         "Technical Team Support",
+         "GST Return",
+        "TDS Return",
+        "Income Tax Return without Audit",
       ],
     },
     {
-      title: "Monthly Plan",
+      title: "Pro (Monthly)",
       price: 7000,
       duration: "Per Month",
       features: [
-        "4-Day Access",
-        "Up to 1000 entries/month",
-        "GST Return",
-        "TDS Return",
+        "4-Day Visit",
+      
+       
         "1 Bookkeeping Officers (On site)",
-        "1 Accountant",
-        "Technical Team",
+        "1 Accountant",        
         "Technical Team Support",
+         "GST Return",
+        "TDS Return",
+        "Income Tax Return without Audit",
       ],
     },
     {
-      title: "Yearly Plan",
+      title: "Elite (Yearly)",
       price: 60000,
       duration: "Per Year",
       features: [
-        "48-Day Access",
-        "Up to 18,000 entries/year",
-        "GST Return",
+        "48-Day Visit",
+      
+       
+        "1 Bookkeeping Officers (On site)",
+        "1 Accountant",        
+        "Technical Team Support",
+         "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
-        "1 Bookkeeping Officers (On site)",
-        "1 Accountant",
-        "Technical Team",
-        "Technical Team Support",
       ],
     },
   ];
@@ -157,7 +160,7 @@ export default function Plans() {
           contact: formData.phone,
         },
         theme: {
-          color: "#E51D25",
+          color: "#003366",
         },
       };
 
@@ -172,7 +175,7 @@ export default function Plans() {
   return (
     <section id="Plans" className="mx-auto px-5 sm:px-20 py-16 text-center">
       <div>
-        <h1 className="bg-[#E51D25] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block">
+        <h1 className="bg-[#003366] text-white px-4 py-1 rounded-lg text-xl font-semibold mb-10 inline-block">
           Our Plans
         </h1>
       </div>
@@ -181,10 +184,10 @@ export default function Plans() {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="border border-[#E51D25] rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col justify-between bg-white"
+            className="border border-[#003366] rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col justify-between bg-white"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-[#E51D25] mb-2">
+              <h3 className="text-2xl font-semibold text-[#003366] mb-2">
                 {plan.title}
               </h3>
               <p className="text-3xl font-bold text-black mb-1">
@@ -192,16 +195,40 @@ export default function Plans() {
               </p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
 
-              <ul className="list-none list-inside space-y-4 text-gray-700 font-medium text-lg">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    <span className="w-5 h-5 flex justify-center items-center bg-green-500 text-white rounded-sm mr-3">
-                      ✓
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+             <ul className="list-none list-inside space-y-4 text-[#231f20] font-medium text-lg">
+  {plan.features.map((feature, i) => {
+    let isCross = false;
+
+    if (plan.title === "Essential (1 Day)" && i >= plan.features.length - 3) {
+      isCross = true;
+    } else if (plan.title === "Pro (Monthly)" && i === plan.features.length - 1) {
+      isCross = true;
+    }
+
+    return (
+      <li
+  key={i}
+  className={`flex items-center ${
+    isCross
+      ? "text-gray-400 hover:text-black"
+      : "text-[#231f20]"
+  }`}
+>
+  {isCross ? (
+    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-red-500 rounded-sm mr-3 font-bold">
+      ✕
+    </span>
+  ) : (
+    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-green-500 rounded-sm mr-3 font-bold">
+      ✓
+    </span>
+  )}
+  {feature}
+</li>
+
+    );
+  })}
+</ul>
             </div>
 
             <button
@@ -209,7 +236,7 @@ export default function Plans() {
                 setSelectedPlan(plan);
                 setShowModal(true);
               }}
-              className="mt-6 bg-[#E51D25] text-white py-2 rounded-lg hover:bg-[#c9181f] transition"
+             className="mt-6 bg-[#ffbf00] text-white py-2 rounded-lg hover:bg-[#003366] transition"
             >
               Choose Plan
             </button>
@@ -219,7 +246,7 @@ export default function Plans() {
 
       <div className="text-left py-10">
         <p className="text-2xl font-semibold">Note -</p>
-        <ul className="list-decimal pl-6 text-xl space-y-2">
+        <ul className="list-decimal pl-6 text-xl space-y-2 text-[#231f20]">
           <li>
             Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
           </li>
@@ -284,7 +311,7 @@ export default function Plans() {
               </button>
               <button
                 onClick={handlePaymentSubmit}
-                className="px-4 py-2 rounded bg-[#E51D25] text-white"
+                className="px-4 py-2 rounded bg-[#003366] text-white"
               >
                 Proceed to Pay
               </button>
