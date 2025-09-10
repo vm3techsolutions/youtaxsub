@@ -24,12 +24,14 @@ export default function Plans() {
       price: 2000,
       duration: "Per Day",
       features: [
+        "No system required",
+        "No software needed",
         "1-Day Visit",
-      
+
         "1 Bookkeeping Officers (On site)",
-        "1 Accountant",        
+        "1 Accountant",
         "Technical Team Support",
-         "GST Return",
+        "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
       ],
@@ -39,13 +41,14 @@ export default function Plans() {
       price: 7000,
       duration: "Per Month",
       features: [
+        "No system required",
+        "No software needed",
         "4-Day Visit",
-      
-       
+
         "1 Bookkeeping Officers (On site)",
-        "1 Accountant",        
+        "1 Accountant",
         "Technical Team Support",
-         "GST Return",
+        "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
       ],
@@ -55,13 +58,14 @@ export default function Plans() {
       price: 60000,
       duration: "Per Year",
       features: [
+        "No system required",
+        "No software needed",
         "48-Day Visit",
-      
-       
+
         "1 Bookkeeping Officers (On site)",
-        "1 Accountant",        
+        "1 Accountant",
         "Technical Team Support",
-         "GST Return",
+        "GST Return",
         "TDS Return",
         "Income Tax Return without Audit",
       ],
@@ -83,13 +87,13 @@ export default function Plans() {
     let isValid = true;
 
     if (!formData.name.trim()) {
-    newErrors.name = "Name is required.";
-    isValid = false;
+      newErrors.name = "Name is required.";
+      isValid = false;
     } else if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
-    newErrors.name = "Name must contain only letters and spaces.";
-    isValid = false;
+      newErrors.name = "Name must contain only letters and spaces.";
+      isValid = false;
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
       isValid = false;
@@ -195,40 +199,45 @@ export default function Plans() {
               </p>
               <p className="text-gray-600 mb-4">{plan.duration}</p>
 
-             <ul className="list-none list-inside space-y-4 text-[#231f20] font-medium text-lg">
-  {plan.features.map((feature, i) => {
-    let isCross = false;
+              <ul className="list-none list-inside space-y-4 text-[#231f20] font-medium text-lg">
+                {plan.features.map((feature, i) => {
+                  let isCross = false;
 
-    if (plan.title === "Essential (1 Day)" && i >= plan.features.length - 3) {
-      isCross = true;
-    } else if (plan.title === "Pro (Monthly)" && i === plan.features.length - 1) {
-      isCross = true;
-    }
+                  if (
+                    plan.title === "Essential (1 Day)" &&
+                    i >= plan.features.length - 3
+                  ) {
+                    isCross = true;
+                  } else if (
+                    plan.title === "Pro (Monthly)" &&
+                    i === plan.features.length - 1
+                  ) {
+                    isCross = true;
+                  }
 
-    return (
-      <li
-  key={i}
-  className={`flex items-center ${
-    isCross
-      ? "text-gray-400 hover:text-black"
-      : "text-[#231f20]"
-  }`}
->
-  {isCross ? (
-    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-red-500 rounded-sm mr-3 font-bold">
-      ✕
-    </span>
-  ) : (
-    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-green-500 rounded-sm mr-3 font-bold">
-      ✓
-    </span>
-  )}
-  {feature}
-</li>
-
-    );
-  })}
-</ul>
+                  return (
+                    <li
+                      key={i}
+                      className={`flex items-center ${
+                        isCross
+                          ? "text-gray-400 hover:text-black"
+                          : "text-[#231f20]"
+                      }`}
+                    >
+                      {isCross ? (
+                        <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-red-500 rounded-sm mr-3 font-bold">
+                          ✕
+                        </span>
+                      ) : (
+                        <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-green-500 rounded-sm mr-3 font-bold">
+                          ✓
+                        </span>
+                      )}
+                      {feature}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
 
             <button
@@ -236,7 +245,7 @@ export default function Plans() {
                 setSelectedPlan(plan);
                 setShowModal(true);
               }}
-             className="mt-6 bg-[#ffbf00] text-white py-2 rounded-lg hover:bg-[#003366] transition"
+              className="mt-6 bg-[#ffbf00] text-white py-2 rounded-lg hover:bg-[#003366] transition"
             >
               Choose Plan
             </button>
@@ -248,10 +257,12 @@ export default function Plans() {
         <p className="text-2xl font-semibold">Note -</p>
         <ul className="list-decimal pl-6 text-xl space-y-2 text-[#231f20]">
           <li>
-            Entries include Sales Bills, Purchase Bills, and Bank Account Statements.
+            Entries include Sales Bills, Purchase Bills, and Bank Account
+            Statements.
           </li>
           <li>
-            The prices mentioned are subject to change. Please refer to our latest pricing details.
+            The prices mentioned are subject to change. Please refer to our
+            latest pricing details.
           </li>
         </ul>
       </div>
@@ -280,27 +291,39 @@ export default function Plans() {
               placeholder="Name"
               className="w-full border px-3 py-2 mb-1 rounded"
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
             />
-            {errors.name && <p className="text-sm text-red-500 mb-2">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-sm text-red-500 mb-2">{errors.name}</p>
+            )}
 
             <input
               type="email"
               placeholder="Email"
               className="w-full border px-3 py-2 mb-1 rounded"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
-            {errors.email && <p className="text-sm text-red-500 mb-2">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-sm text-red-500 mb-2">{errors.email}</p>
+            )}
 
             <input
               type="tel"
               placeholder="Phone"
               className="w-full border px-3 py-2 mb-1 rounded"
               value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
             />
-            {errors.phone && <p className="text-sm text-red-500 mb-2">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-sm text-red-500 mb-2">{errors.phone}</p>
+            )}
 
             <div className="flex justify-between mt-4">
               <button
