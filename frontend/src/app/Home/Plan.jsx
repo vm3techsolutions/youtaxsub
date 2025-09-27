@@ -200,9 +200,9 @@ export default function Plans() {
   {plan.features.map((feature, i) => {
     let isCross = false;
 
-    if (plan.title === "Essential (1 Day)" && i >= plan.features.length - 3) {
+    if (plan.title === "Essential" && i >= plan.features.length - 3) {
       isCross = true;
-    } else if (plan.title === "Pro (Monthly)" && i === plan.features.length - 1) {
+    } else if (plan.title === "Pro" && i === plan.features.length - 1) {
       isCross = true;
     }
 
