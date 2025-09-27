@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative mx-auto px-5 md:px-16 py-16 flex flex-col md:flex-row gap-8 items-center md:items-start">
       
       {/* Left Background Vertical Text */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-5xl font-bold text-gray-500/10 tracking-widest hidden md:block ml-20 md:ml-52 2xl:ml-64 ">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-4xl font-bold text-gray-500/10 tracking-widest hidden md:block ml-20 md:ml-64 2xl:ml-72 -mt-8 ">
         YOUTAX INDIA <br/> CONSULTING PVT. LTD.
       </div>
 
@@ -14,7 +14,7 @@ export default function HeroSection() {
 
       {/* Left Column */}
       <div className="w-full md:w-[40%] sm:px-6 relative z-10">
-        <h1 className="text-4xl md:text-8xl font-light leading-tight ">
+        <h1 className="text-2xl md:text-4xl font-light leading-tight ">
           Simplify Your <br />
           <span className="text-[#003366] font-bold">Needs in Minutes!</span>
         </h1>
@@ -38,13 +38,13 @@ export default function HeroSection() {
           your number one source for all types of  <strong>taxation services.</strong>We're dedicated to giving you the best of service for the <strong>growth of your business, </strong>with a professional team.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-7">
           <Image
             src="/assets/simplify-right.png"
             alt="Meeting Discussion"
             width={500}
             height={300}
-            className="rounded-xl object-cover w-full 2xl:h-[90vh]"
+            className="rounded-xl object-cover w-full h-[50vh]"
           />
         </div>
       </div>

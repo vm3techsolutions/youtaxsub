@@ -16,12 +16,12 @@ export default function ServicesSection() {
             </div>
 
             {/* Subtitle */}
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-[#231f29] mb-12 ">
+            <h2 className="text-2xl md:text-4xl font-light leading-tight mb-12 ">
             Tired Of <br />
-              <span className="text-[#003366]">Late Fees ? </span>
+              <span className="text-[#003366] font-bold">Late Fees ? </span>
             </h2>
 
-            <p className="text-lg">Late fees are frustrating, unnecessary, and often completely avoidable. Whether it’s a missed tax deadline, overdue GST filing, or forgotten ROC compliance, one thing’s for sure: they hurt your cash flow and peace of mind.</p>
+            <p className="text-xl">Late fees are frustrating, unnecessary, and often completely avoidable. Whether it’s a missed tax deadline, overdue GST filing, or forgotten ROC compliance, one thing’s for sure: they hurt your cash flow and peace of mind.</p>
 
             <h2 className="text-[#003366] text-2xl font-semibold mt-4">Here’s how we help you:</h2>
             

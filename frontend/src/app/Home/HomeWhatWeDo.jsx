@@ -35,7 +35,7 @@ export default function ServicesSection() {
               <div className="w-28 sm:w-40 md:w-64 h-[1px] bg-white mt-2 ml-14 sm:ml-12 md:ml-14" />
             </div>
 
-            <p className="text-white text-base sm:text-lg leading-relaxed mb-6">
+            <p className="text-white  sm:text-xl leading-relaxed mb-6">
               Managing your business finances efficiently is crucial for growth and compliance.
               Our flexible accountant hiring services allow you to acquire professional financial help
               based on your needs and financial constraints. Our staff of seasoned Chartered Accountants (CAs)
@@ -68,7 +68,7 @@ export default function ServicesSection() {
               <div className="w-28 sm:w-40 md:w-64 h-[2px] bg-white mt-2 ml-14 sm:ml-12 md:ml-14" />
             </div>
 
-            <p className="text-white text-base sm:text-lg leading-relaxed mb-6">
+            <p className="text-white  sm:text-xl leading-relaxed mb-6">
               Our comprehensive business consulting services are designed to support entrepreneurs and established businesses throughout their journey. From initial registration to ongoing compliance, we offer a range of solutions tailored to your needs.
               Our team of experienced professionals is committed to providing personalized solutions to meet your business's unique requirements. Whether you're starting a new venture or looking to optimize your existing operations, we're here to help you achieve your goals.
             </p>

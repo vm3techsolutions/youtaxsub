@@ -20,13 +20,13 @@ export default function Plans() {
 
   const plans = [
     {
-      title: "Essential (1 Day)",
+      title: "Essential",
       price: 2000,
       duration: "Per Day",
       features: [
         "No system required",
         "No software needed",
-        "1-Day Visit",
+        "Remote assistant",
         "1 Bookkeeping Officers (On site)",
         "1 Accountant",
         "Technical Team Support",
@@ -36,7 +36,7 @@ export default function Plans() {
       ],
     },
     {
-      title: "Pro (Monthly)",
+      title: "Pro",
       price: 7000,
       duration: "Per Month",
       features: [
@@ -52,8 +52,8 @@ export default function Plans() {
       ],
     },
     {
-      title: "Elite (Yearly)",
-      price: 60000,
+      title: "Elite",
+      price: 72000,
       duration: "Per Year",
       features: [
         "No system required",

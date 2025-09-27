@@ -17,9 +17,9 @@ export default function ServicesSection() {
             </div>
 
             {/* Subtitle */}
-            <h2 className="text-lg sm:text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-medium text-[#231f20] mb-12 ">
+            <h2 className="text-2xl md:text-4xl font-light leading-tight mb-12 ">
               Simplifying Your Finances, <br />
-              <span className="text-[#003366]">Empowering Your Growth!</span>
+              <span className="text-[#003366] font-bold">Empowering Your Growth!</span>
             </h2>
 
             <div className="flex space-x-10 ">
@@ -56,7 +56,7 @@ export default function ServicesSection() {
     
     {/* Text Section - Increased Width */}
     <div className="md:w-[65%] p-5 sm:p-6 ">
-      <p className="text-md text-[#231f20]">
+      <p className="text-xl text-[#231f20]">
         The team at the firm has dedicated and experienced professionals and associates like Chartered Accountants, Company Secretary and Consultants to provide end to end services to your business.
         Founded in 2018 by Mr. Nandkishor And Mrs. Sonali Devadnye, YOUTAX INDIA CONSULTING PRIVATE LIMITED has come a long way from its beginnings in Hadapsar Pune. When they first started out, their passion for providing in time delivery of quality services in the field of TAX so that YOUTAX INDIA CONSULTING PRIVATE LIMITED can offer you quality services for your business for future growth. We now serve customers all over Maharashtra.
       </p>
