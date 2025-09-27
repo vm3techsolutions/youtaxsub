@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import axios from "axios";
 
+
 export default function Plans() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
@@ -216,11 +217,11 @@ export default function Plans() {
   }`}
 >
   {isCross ? (
-    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-red-500 rounded-sm mr-3 font-bold">
+    <span className="w-5 h-5 flex justify-center items-center bg-red-500 text-[#f5f4f4] rounded-sm mr-3 font-bold">
       ✕
     </span>
   ) : (
-    <span className="w-5 h-5 flex justify-center items-center bg-[#f5f4f4] text-green-500 rounded-sm mr-3 font-bold">
+    <span className="w-5 h-5 flex justify-center items-center bg-green-600 text-[#f5f4f4] rounded-sm mr-3 font-bold">
       ✓
     </span>
   )}
