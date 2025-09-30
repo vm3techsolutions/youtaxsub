@@ -28,7 +28,7 @@ export default function Plans() {
         "No system required",
         "No software needed",
         "Remote assistant",
-        "1 Bookkeeping Officers (On site)",
+        "1 Bookkeeping Officers",
         "1 Accountant",
         "Technical Team Support",
         "GST Return",
@@ -189,9 +189,13 @@ export default function Plans() {
             className="border border-[#003366] rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col justify-between bg-white"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-[#003366] mb-2">
-                {plan.title}
-              </h3>
+           <div className="flex justify-center">
+  <h3 className="text-2xl font-semibold text-[#003366] mb-2 bg-[#ffbf00] px-4 py- rounded-lg inline-block">
+    {plan.title}
+  </h3>
+</div>
+
+
               <p className="text-3xl font-bold text-black mb-1">
                 ₹{plan.price}
               </p>
