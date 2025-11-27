@@ -41,7 +41,7 @@ export default function ServicesSection() {
           <div className="mt-2">
             <Image
               src="/assets/About2.png"
-              alt="Meeting Discussion"
+              alt="Corporate Audit Services"
               width={500}
               height={300}
               className="rounded-xl object-cover w-full h-full"
@@ -81,7 +81,7 @@ export default function ServicesSection() {
     <div className="md:w-[35%] mt-2 flex justify-center items-start">
       <Image
         src="/assets/About1.png"
-        alt="Meeting Discussion"
+        alt="Financial Audit for Companies"
         width={300}
         height={250}
         className="rounded-xl object-cover h-[60vh] 2xl:h-[50vh] w-full"

@@ -16,7 +16,7 @@ export default function Header() {
         <Link href="/">
           <Image
             src="/assets/Logo.jpg"
-            alt="YouTax Logo"
+            alt="Bookkeeping services Pune"
             width={120}
             height={50}
           />

@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="mt-10">
           <Image
             src="/assets/simplify-left.png"
-            alt="Business Analysis"
+            alt="Affordable Corporate Audit Services"
             width={240}
             height={288}
             className="rounded-xl h-72 w-80 object-cover "
@@ -41,7 +41,7 @@ export default function HeroSection() {
         <div className="mt-7">
           <Image
             src="/assets/simplify-right.png"
-            alt="Meeting Discussion"
+            alt="Accountants in Baramati"
             width={500}
             height={300}
             className="rounded-xl object-cover w-full h-[50vh]"
